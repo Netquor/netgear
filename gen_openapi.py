@@ -156,6 +156,12 @@ def field_schema(fields):
             else:
                 prop["enum"] = [value] if value else []
             prop["x-html-type"] = "radio"
+        elif name == "submt":
+            # the page renders it empty, but the UI fills 0x10 before submit
+            prop["default"] = "16"
+            prop["description"] = ("Apply flag. The web UI posts `16` (0x10) "
+                                   "when Apply is pressed; an empty value is "
+                                   "accepted but changes nothing.")
         elif f.get("value"):
             if is_device_value(name, f["value"]):
                 prop["x-echo"] = True

@@ -93,7 +93,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "refrsh": {
           "type": "string"
@@ -216,7 +218,9 @@
           "default": "Warning: Changing protocol mode will reset IP configuration."
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -380,7 +384,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "delete": {
           "type": "string"
@@ -594,7 +600,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -764,7 +772,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "refrsh": {
           "type": "string"
@@ -863,7 +873,9 @@
           "x-html-type": "radio"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "err_flag": {
           "type": "string",
@@ -995,7 +1007,9 @@
           "default": "512"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -1142,7 +1156,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -1252,7 +1268,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -1367,7 +1385,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -1476,7 +1496,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -1631,7 +1653,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          }
         },
         "required": [
@@ -1857,7 +1881,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          }
         },
         "required": [
@@ -1938,7 +1964,9 @@
           "x-html-type": "radio"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "err_flag": {
           "type": "string",
@@ -2040,7 +2068,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "selectedPorts": {
           "type": "string"
@@ -2180,7 +2210,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -2317,7 +2349,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -2449,7 +2483,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "err_flag": {
           "type": "string"
@@ -2562,7 +2598,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -2679,7 +2717,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "refrsh": {
           "type": "string"
@@ -2788,7 +2828,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "selectedPorts": {
           "type": "string"
@@ -3023,7 +3065,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "delete": {
           "type": "string"
@@ -3128,7 +3172,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "delete": {
           "type": "string"
@@ -3255,7 +3301,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -3386,7 +3434,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -3497,7 +3547,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "err_flag": {
           "type": "string",
@@ -3631,7 +3683,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "err_flag": {
           "type": "string",
@@ -3862,7 +3916,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "err_flag": {
           "type": "string",
@@ -4445,7 +4501,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "delete": {
           "type": "string"
@@ -4572,7 +4630,8 @@
          },
          "submt": {
           "type": "string",
-          "default": "0"
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -4743,7 +4802,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -4869,7 +4930,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -5006,7 +5069,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "err_flag": {
           "type": "string",
@@ -5112,7 +5177,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -5344,7 +5411,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "restore": {
           "type": "string"
@@ -5576,7 +5645,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -5701,7 +5772,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "err_flag": {
           "type": "string",
@@ -5832,7 +5905,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -6135,7 +6210,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -6240,7 +6317,9 @@
           "default": "0"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -6709,7 +6788,9 @@
           "default": "3"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "err_flag": {
           "type": "string",
@@ -6818,7 +6899,9 @@
           "default": "0"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -6964,7 +7047,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -7345,7 +7430,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -7484,7 +7571,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -7614,7 +7703,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -7726,7 +7817,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "err_flag": {
           "type": "string",
@@ -7836,7 +7929,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "err_flag": {
           "type": "string",
@@ -8097,7 +8192,9 @@
           "default": "300"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -8223,7 +8320,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "err_flag": {
           "type": "string",
@@ -8779,7 +8878,9 @@
           "readOnly": true
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -8899,7 +9000,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -9031,7 +9134,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -9270,7 +9375,9 @@
           "x-html-type": "select"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -9411,7 +9518,9 @@
           "x-html-type": "select"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -9506,7 +9615,9 @@
           "x-html-type": "radio"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -9617,7 +9728,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "selectedPorts": {
           "type": "string"
@@ -9743,7 +9856,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "selectedPorts": {
           "type": "string"
@@ -9859,7 +9974,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "delete": {
           "type": "string"
@@ -10010,7 +10127,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -10183,7 +10302,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -10302,7 +10423,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -10434,7 +10557,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -10604,7 +10729,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -10716,7 +10843,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -10807,7 +10936,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "delete": {
           "type": "string"
@@ -10906,7 +11037,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "err_flag": {
           "type": "string",
@@ -11022,7 +11155,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -11147,7 +11282,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -11272,7 +11409,9 @@
           "x-html-type": "checkbox"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -11382,7 +11521,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -11515,7 +11656,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "delete": {
           "type": "string"
@@ -11632,7 +11775,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "refrsh": {
           "type": "string"
@@ -11787,7 +11932,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -12007,7 +12154,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -12416,7 +12565,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -12567,7 +12718,9 @@
           "x-html-type": "radio"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -12703,7 +12856,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -12818,7 +12973,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -12877,7 +13034,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -13001,7 +13160,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "action": {
           "type": "string",
@@ -13100,7 +13261,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -13311,7 +13474,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -13461,7 +13626,9 @@
           "default": "0"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -13850,7 +14017,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "warn_flag": {
           "type": "string"
@@ -14088,7 +14257,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -14338,7 +14509,9 @@
           "default": "No IP ACLs are currently configured. \n"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -14554,7 +14727,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "delete": {
           "type": "string"
@@ -15307,7 +15482,9 @@
           "x-html-type": "select"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "refrsh": {
           "type": "string"
@@ -15418,7 +15595,9 @@
           "x-html-type": "select"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -15559,7 +15738,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "delete": {
           "type": "string"
@@ -15853,7 +16034,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "delete": {
           "type": "string"
@@ -15949,7 +16132,9 @@
           "x-html-type": "checkbox"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -16024,7 +16209,9 @@
           "x-html-type": "checkbox"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -16099,7 +16286,9 @@
           "x-html-type": "checkbox"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -16226,7 +16415,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -16434,7 +16625,9 @@
           "x-html-type": "checkbox"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "txstatus": {
           "type": "string"
@@ -16594,7 +16787,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -16710,7 +16905,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "activate_flag": {
           "type": "string"
@@ -16904,7 +17101,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -17006,7 +17205,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"
@@ -17130,7 +17331,9 @@
           "type": "string"
          },
          "submt": {
-          "type": "string"
+          "type": "string",
+          "default": "16",
+          "description": "Apply flag. The web UI posts `16` (0x10) when Apply is pressed; an empty value is accepted but changes nothing."
          },
          "cncel": {
           "type": "string"

@@ -54,6 +54,20 @@ python3 gs108t.py fields /base/system/port/port_cfg.html
 python3 gs108t.py get /base/system/stats/stats_switch.html --out stats.html
 ```
 
+`GS108T_HOST` is the only setting that names the switch. The default is the
+RFC 5737 placeholder `http://192.0.2.10`, so nothing works until you set it.
+`--host` overrides the environment variable, and it must come **before** the
+command:
+
+```bash
+gs108t --host 192.0.2.10 summary        # works
+gs108t summary --host 192.0.2.10        # argparse error: unrecognized arguments
+```
+
+The value may omit the scheme (`--host 192.0.2.10`) or include a port
+(`http://192.0.2.10:8080`). This firmware serves HTTP on port 80 only;
+`https://` is accepted with `--insecure` if a TLS proxy sits in front of it.
+
 Change one value without touching the rest of the form:
 
 ```bash

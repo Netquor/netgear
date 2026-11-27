@@ -96,8 +96,11 @@ class Client:
             if not self.verify_tls:
                 ctx.check_hostname = False
                 ctx.verify_mode = ssl.CERT_NONE
+            # timeout is keyword-only on HTTPSConnection; the third positional
+            # argument is the TLS context, which would shadow the timeout
             return http.client.HTTPSConnection(self.host, self.port,
-                                               self.timeout, context=ctx)
+                                               timeout=self.timeout,
+                                               context=ctx)
         return http.client.HTTPConnection(self.host, self.port, self.timeout)
 
     def _store_cookies(self, headers):
@@ -218,6 +221,10 @@ class Client:
         data.update({k: str(v) for k, v in values.items()})
         if submit:
             data[submit] = "Apply"
+        elif "submt" in form.field_names():
+            # the UI posts 0x10 when Apply is pressed; without it the device
+            # accepts the POST but changes nothing
+            data["submt"] = "16"
         # form actions may be relative to the page's directory
         action = urljoin(self.base + path, form.action or path)
         return action, data
@@ -507,14 +514,17 @@ def cmd_summary(c, args):
 
 
 def cmd_save(c, args):
-    r = c.post("/base/system/save_changes.html", {})
+    # the Save page needs the SaveChanges box ticked plus the Apply flag
+    r = c.post("/base/system/save_changes.html",
+               {"SaveChanges": "checkbox", "submt": "16"})
     print(f"{r.status} save requested")
 
 
 def cmd_reboot(c, args):
     if not args.yes:
         sys.exit("reboot is disruptive: pass --yes to confirm")
-    r = c.post("/base/system/sys_reset.html", {})
+    # the Reboot page requires its confirmation box and the Apply flag
+    r = c.post("/base/system/sys_reset.html", {"CBox_2": "0", "submt": "16"})
     print(f"{r.status} reboot requested")
 
 
