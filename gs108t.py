@@ -27,6 +27,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import difflib
 import getpass
 import html as htmlmod
 import http.client
@@ -70,6 +71,32 @@ class Response:
 
     def __repr__(self):
         return f"<Response {self.status} {self.url} {len(self.body)}B>"
+
+
+def unknown_field_message(path, unknown, known):
+    """Explain a --field name the form does not have.
+
+    The usual cause is not a typo but a damaged argv: a Ctrl-C or a paste from
+    a transcript leaves a control character (or its caret notation) inside the
+    name, which is invisible in a terminal and produces a baffling error.
+    """
+    hints = []
+    for name in sorted(unknown):
+        ctl = [c for c in name if ord(c) < 32 or ord(c) == 127]
+        near = difflib.get_close_matches(name, known, n=1, cutoff=0.6)
+        if ctl:
+            hint = (f"{name!r} contains a control character "
+                    f"0x{ord(ctl[0]):02x}; it came from the shell or a paste, "
+                    f"not from this page")
+            if near:
+                hint += f" (did you mean {near[0]!r}?)"
+            hints.append(hint)
+        elif near:
+            hints.append(f"{name!r}: did you mean {near[0]!r}?")
+        else:
+            hints.append(repr(name))
+    return (f"{path}: unknown field(s): " + "; ".join(hints) +
+            "\nknown: " + ", ".join(known))
 
 
 class Client:
@@ -214,9 +241,8 @@ class Client:
         form = forms[form_index]
         unknown = set(values) - form.field_names()
         if unknown:
-            raise RuntimeError(
-                f"{path}: unknown field(s) {sorted(unknown)}; "
-                f"known: {', '.join(sorted(form.field_names()))}")
+            raise RuntimeError(unknown_field_message(
+                path, unknown, sorted(form.field_names())))
         data = form.defaults()
         data.update({k: str(v) for k, v in values.items()})
         if submit:

@@ -68,6 +68,16 @@ def main():
     check("separate form handlers are documented", bool(action_paths),
           f"{len(action_paths)} apply-only paths")
 
+    # a damaged argv (Ctrl-C, paste from a transcript) must not just say "no"
+    msg = gs108t.unknown_field_message("/p", {"^Ciority"},
+                                       ["priority", "pvid", "ftype"])
+    check("bad field name gets a did-you-mean",
+          "did you mean 'priority'" in msg, msg.splitlines()[0])
+    msg = gs108t.unknown_field_message("/p", {"pri\x03ority"},
+                                       ["priority", "pvid"])
+    check("control character in a field name is named",
+          "0x03" in msg and "priority" in msg, msg.splitlines()[0])
+
     ep_path = os.path.join(HERE, "endpoints.json")
     if os.path.exists(ep_path):
         ep = json.load(open(ep_path))
