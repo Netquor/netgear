@@ -39,7 +39,7 @@ import time
 from html.parser import HTMLParser
 from urllib.parse import urlencode, urljoin, urlsplit
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = os.path.dirname(os.path.realpath(__file__))
 # Documentation address (RFC 5737). Point GS108T_HOST at your own switch.
 DEFAULT_HOST = os.environ.get("GS108T_HOST", "http://192.0.2.10")
 LOGIN_PATH = "/base/main_login.html"

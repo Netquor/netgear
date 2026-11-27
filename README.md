@@ -74,6 +74,25 @@ python3 gs108t.py save
 handler work without extra flags. Pages with more than one form (for example,
 VLAN membership add and delete) take `--form N`.
 
+## Install
+
+The CLI is a single standard-library script, so a symlink on your `PATH` is
+enough. It resolves symlinks to find `catalog.json` next to the real file, so
+keep the checkout and link to `gs108t.py` itself:
+
+```bash
+chmod +x gs108t.py
+
+# pick a directory that is already on PATH
+ln -s "$PWD/gs108t.py" /opt/homebrew/bin/gs108t    # Apple Silicon Homebrew
+# ln -s "$PWD/gs108t.py" ~/.local/bin/gs108t       # if ~/.local/bin is on PATH
+
+gs108t --help
+```
+
+Then `gs108t summary` works from any directory. Updating the checkout updates the
+command; nothing is copied.
+
 ## Generate the spec with real field schemas
 
 The catalog already lists every path. Form bodies require one authenticated crawl:
