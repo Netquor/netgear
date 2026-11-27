@@ -46,6 +46,12 @@ PRETTY = {
     "dot1as": "802.1AS",
     "PortAuthentication": "Port Authentication",
     "Diffserv": "DiffServ",
+    "AddressTable": "Address Table",
+    "RouterDiscovery": "Router Discovery",
+    "RoutingTable": "Routing Table",
+    "Filemanagement": "File Management",
+    "AutoVoIP": "Auto VoIP",
+    "Deviceview": "Device View",
 }
 
 CASE_RE = re.compile(r'^\s*case\s+"([^"]+)"\s*:')

@@ -146,8 +146,16 @@ class Client:
 
     # --- session ---------------------------------------------------------
     def logged_in(self):
+        """True when a session cookie opens the main shell.
+
+        This firmware answers 200 with the shell instead of redirecting, so
+        look for shell-only markers (the login page has none of them).
+        """
         r = self.request("GET", MAIN_PATH, follow=False)
-        return r.status == 200 and b"<frameset" in r.body.lower()
+        if r.status != 200:
+            return False
+        body = r.body.lower()
+        return b"headdiv" in body or b"<iframe" in body or b"waitpreloadpage" in body
 
     def login(self):
         if not self.password:
@@ -165,7 +173,9 @@ class Client:
         r = self.request("POST", LOGIN_PATH, fields, headers=headers,
                          follow=False)
         loc = r.header("location") or ""
-        ok = r.status in (301, 302, 303) and MAIN_PATH in loc
+        ok = "SID" in self.cookies
+        if not ok:
+            ok = r.status in (301, 302, 303) and MAIN_PATH in loc
         if not ok:
             ok = self.logged_in()
         if not ok:
@@ -192,12 +202,8 @@ class Client:
         p.feed(html)
         return p.forms
 
-    def apply(self, path, values, form_index=0, submit=None):
-        """Read the page, fill the chosen form, POST it back.
-
-        Values are matched by input name. Anything not supplied keeps the value
-        the page rendered (checked boxes, selected options, hidden tokens).
-        """
+    def prepare(self, path, values, form_index=0, submit=None):
+        """Build the exact payload a browser would submit for this form."""
         html = self.get(path).text
         forms = self.forms(path, html)
         if not forms:
@@ -214,6 +220,15 @@ class Client:
             data[submit] = "Apply"
         # form actions may be relative to the page's directory
         action = urljoin(self.base + path, form.action or path)
+        return action, data
+
+    def apply(self, path, values, form_index=0, submit=None):
+        """Read the page, fill the chosen form, POST it back.
+
+        Values are matched by input name. Anything not supplied keeps the value
+        the page rendered (checked boxes, selected options, hidden tokens).
+        """
+        action, data = self.prepare(path, values, form_index, submit)
         return self.post(action, data)
 
 
@@ -233,7 +248,8 @@ class Field:
         if self.disabled:
             d["disabled"] = True
         if self.options:
-            d["options"] = [{"value": o["value"], "text": o["text"]}
+            d["options"] = [{"value": o["value"],
+                             "text": re.sub(r"\s+", " ", o["text"]).strip()}
                             for o in self.options]
             sel = [o["value"] for o in self.options if o["selected"]]
             if sel:
@@ -323,6 +339,8 @@ class FormParser(HTMLParser):
 
     def handle_endtag(self, tag):
         if tag == "select":
+            # <option> end tags are optional; stop collecting on the select
+            self._option = None
             self._select = None
         elif tag == "option":
             self._option = None
@@ -381,10 +399,16 @@ def parse_table_rows(html):
 def kv_pairs(html):
     """Collapse label/value table rows into a dict (best effort)."""
     out = {}
-    for r in parse_table_rows(html):
+    rows = parse_table_rows(html)
+    for i, r in enumerate(rows):
         cells = [c for c in r if c]
         if len(cells) == 2:
             out.setdefault(cells[0].rstrip(":"), cells[1])
+        # header row followed by a value row, e.g. Model Name / Boot / Software
+        if len(r) >= 2 and r[0].strip() == "Model Name" and i + 1 < len(rows):
+            for key, value in zip(r, rows[i + 1]):
+                if key and value:
+                    out[key] = value
     return out
 
 
@@ -399,8 +423,8 @@ def cmd_login(c, args):
     r = c.get("/base/system/management/sysInfo.html")
     info = kv_pairs(r.text)
     print(f"logged in to {c.base}")
-    for k in ("System Name", "Model", "Boot Version", "Software Version",
-              "MAC Address", "Serial Number"):
+    for k in ("Model Name", "Software Version", "Boot Version", "Boot",
+              "Base MAC Address", "Serial Number", "System Up Time"):
         if k in info:
             print(f"  {k:16} {info[k]}")
 
@@ -458,6 +482,13 @@ def cmd_set(c, args):
             sys.exit(f"bad --field {item!r}, expected name=value")
         k, v = item.split("=", 1)
         values[k] = v
+    if args.dry_run:
+        action, data = c.prepare(args.path, values, form_index=args.form)
+        print(f"POST {action}")
+        for k, v in data.items():
+            mark = "*" if k in values else " "
+            print(f" {mark} {k}={v}")
+        return
     r = c.apply(args.path, values, form_index=args.form)
     print(f"{r.status} {r.url} ({len(r.body)}B)")
     if args.show:
@@ -487,6 +518,30 @@ def cmd_reboot(c, args):
     print(f"{r.status} reboot requested")
 
 
+def fetch(c, url, retries):
+    last = None
+    for attempt in range(retries + 1):
+        try:
+            return c.get(url)
+        except (OSError, TimeoutError) as e:
+            last = e
+            if attempt < retries:
+                time.sleep(1.5)
+                # slow pages on this firmware need more than the default
+                c.timeout = max(c.timeout, 30)
+    raise last
+
+
+def reauth(c):
+    """Log in again; some pages (PoE, SNMP) end the session on this model."""
+    c.request("GET", "/", follow=False)
+    return c.login()
+
+
+def is_login_page(r):
+    return b'name="pwd"' in r.body and b"main_login.html" in r.body
+
+
 def cmd_discover(c, args):
     cat = load_catalog()
     out = {"id": "netgear-gs108t-webui", "host": c.base,
@@ -496,27 +551,71 @@ def cmd_discover(c, args):
     if keep:
         os.makedirs(keep, exist_ok=True)
     failures = []
+    relogins = 0
+
+    def get_ok(url):
+        """Fetch a page, restoring the session if the switch drops it."""
+        nonlocal relogins
+        r = fetch(c, url, args.retries)
+        if is_login_page(r) or r.status in (301, 302):
+            reauth(c)
+            relogins += 1
+            r = fetch(c, url, args.retries)
+        return r
+
     for n, p in enumerate(cat["pages"], 1):
+        entry = dict(p)
         try:
-            r = c.get(p["url"])
+            r = get_ok(p["url"])
         except Exception as e:                      # noqa: BLE001
             failures.append({"path": p["path"], "error": repr(e)})
+            entry.update({
+                "status": 0,
+                "unsupported": True,
+                "error": str(e) or type(e).__name__,
+                "bytes": 0,
+                "html_title": "",
+                "forms": [],
+                "tables": 0,
+            })
+            out["pages"].append(entry)
+            # a stalled transfer usually leaves the HTTP server wedged, so
+            # start a fresh session before the next page
+            try:
+                reauth(c)
+                relogins += 1
+            except Exception:                       # noqa: BLE001
+                pass
+            if args.verbose:
+                print(f"{n:3}/{cat['count']} ERR {p['path']}", flush=True)
+            time.sleep(args.delay)
             continue
-        if r.status in (301, 302) and (r.header("location") or "") in (
-                "/", c.base + "/"):
-            sys.exit("session lost (redirected to login); re-run login")
+        if is_login_page(r):
+            failures.append({"path": p["path"], "error": "login page returned"})
+            entry.update({"status": r.status, "unsupported": True,
+                          "error": "login page returned", "bytes": len(r.body),
+                          "html_title": "", "forms": [], "tables": 0})
+            out["pages"].append(entry)
+            continue
         parser = FormParser()
         parser.feed(r.text)
         title_m = re.search(r"(?is)<title>(.*?)</title>", r.text)
-        entry = dict(p)
+        # a sub-100-byte body means the switch aborted the request; the
+        # session is usually gone too, so log in again before the next page
+        empty = r.status == 200 and len(r.body) < 100
         entry.update({
             "status": r.status,
+            "unsupported": r.status == 404 or empty,
+            "empty": empty,
             "bytes": len(r.body),
             "html_title": text_of(title_m.group(1)) if title_m else "",
             "forms": [f.to_dict() for f in parser.forms],
             "tables": len(parse_table_rows(r.text)),
         })
         out["pages"].append(entry)
+        if empty:
+            reauth(c)
+            relogins += 1
         if keep:
             name = re.sub(r"[^a-z0-9]+", "_", p["path"].lower()).strip("_")
             with open(os.path.join(keep, name + ".html"), "wb") as f:
@@ -527,9 +626,14 @@ def cmd_discover(c, args):
     out["failures"] = failures
     out["stats"] = {
         "pages": len(out["pages"]),
+        "supported": sum(1 for p in out["pages"] if p["status"] == 200
+                         and not p.get("empty")),
+        "unsupported": sum(1 for p in out["pages"] if p.get("unsupported")),
+        "empty": sum(1 for p in out["pages"] if p.get("empty")),
         "with_forms": sum(1 for p in out["pages"] if p["forms"]),
         "forms": sum(len(p["forms"]) for p in out["pages"]),
         "fields": sum(len(f["fields"]) for p in out["pages"] for f in p["forms"]),
+        "relogins": relogins,
         "failures": len(failures),
     }
     with open(args.out, "w") as f:
@@ -570,6 +674,8 @@ def main(argv=None):
     p.add_argument("--field", action="append", default=[], metavar="NAME=VALUE")
     p.add_argument("--form", type=int, default=0, help="form index (default 0)")
     p.add_argument("--show", action="store_true", help="print the response HTML")
+    p.add_argument("--dry-run", action="store_true",
+                   help="print the exact POST body without sending it")
     p.set_defaults(func=cmd_set)
 
     p = sub.add_parser("summary", help="read system information")
@@ -587,6 +693,8 @@ def main(argv=None):
     p.add_argument("--keep-html", metavar="DIR")
     p.add_argument("--delay", type=float, default=0.2,
                    help="seconds between requests (default 0.2)")
+    p.add_argument("--retries", type=int, default=1,
+                   help="retries per page on timeout (default 1)")
     p.add_argument("--verbose", action="store_true")
     p.set_defaults(func=cmd_discover)
 

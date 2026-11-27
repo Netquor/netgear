@@ -8,3 +8,7 @@ html/
 
 # secrets, if you choose the password-file flow
 .pw
+
+# per-device crawl: holds one switch's addresses and identity
+endpoints.json
+.venv/

@@ -47,11 +47,10 @@ def main():
 
     spec = json.load(open(os.path.join(HERE, "openapi.json")))
     check("openapi.json is 3.1", spec.get("openapi") == "3.1.0")
-    check("spec has 164 paths", len(spec["paths"]) == 164, str(len(spec["paths"])))
+    check("spec has at least 164 paths", len(spec["paths"]) >= 164,
+          str(len(spec["paths"])))
     check("every spec path is absolute",
           all(k.startswith("/") for k in spec["paths"]))
-    check("login is unauthenticated",
-          spec["paths"]["/base/main_login.html"]["post"].get("security") == [])
 
     yaml_path = os.path.join(HERE, "openapi.yaml")
     yaml_head = open(yaml_path).read(80)
@@ -59,8 +58,48 @@ def main():
           yaml_head.startswith("openapi:"))
 
     # the crawler, the generator and the catalog must agree on the page set
-    check("catalog and spec cover the same pages",
-          {"/" + p["path"] for p in pages} == set(spec["paths"]) - {"/base/main_login.html"})
+    missing = {"/" + p["path"] for p in pages} - set(spec["paths"])
+    check("spec covers every catalog page", not missing,
+          ", ".join(sorted(missing)[:3]))
+    check("login is unauthenticated",
+          spec["paths"]["/base/main_login.html"]["post"].get("security") == [])
+    action_paths = [k for k, v in spec["paths"].items()
+                    if "post" in v and "get" not in v]
+    check("separate form handlers are documented", bool(action_paths),
+          f"{len(action_paths)} apply-only paths")
+
+    ep_path = os.path.join(HERE, "endpoints.json")
+    if os.path.exists(ep_path):
+        ep = json.load(open(ep_path))
+        stats = ep.get("stats") or {}
+        check("crawl covered every page", stats.get("pages") == 163, str(stats.get("pages")))
+        failures = ep.get("failures") or []
+        documented = all(
+            any(p["path"] == f["path"] and p.get("unsupported")
+                for p in ep["pages"])
+            for f in failures)
+        check("every crawl failure is documented as unsupported", documented,
+              f"{len(failures)} failure(s)")
+        # a page whose form asks for pwd is the login screen, not a real capture
+        loginish = [p["path"] for p in ep["pages"]
+                    if any(f["fields"] and f["fields"][0]["name"] == "pwd"
+                           for f in p["forms"])]
+        check("no crawled page is the login screen", not loginish,
+              ", ".join(loginish[:3]))
+        port = next((p for p in ep["pages"]
+                     if p["path"] == "base/system/port/port_cfg.html"), None)
+        check("port_cfg exposes adminMode with options",
+              bool(port) and any(f["name"] == "adminMode" and f.get("options")
+                                 for f in port["forms"][0]["fields"]))
+        unsupported = [p["path"] for p in ep["pages"] if p.get("unsupported")]
+        spec_unsupported = [k for k, v in spec["paths"].items()
+                            if v.get("get", {}).get("x-unsupported")]
+        check("unsupported pages are marked in the spec",
+              len(unsupported) == len(spec_unsupported) > 0,
+              f"{len(unsupported)} pages")
+        typed = sum(1 for v in spec["paths"].values()
+                    if "post" in v and "requestBody" in v["post"])
+        check("spec has typed form bodies", typed >= 100, f"{typed} POST bodies")
 
     if live:
         host = os.environ.get("GS108T_HOST")

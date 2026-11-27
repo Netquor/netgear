@@ -438,7 +438,7 @@
    "path": "switching/auto_voip/auto_voip_cfg.html",
    "title": "Auto-VoIP",
    "top": "Switching",
-   "section": "AutoVoIP",
+   "section": "Auto VoIP",
    "group": "",
    "risk": "write",
    "url": "/switching/auto_voip/auto_voip_cfg.html"
@@ -678,7 +678,7 @@
    "path": "base/system/fwd_db.html",
    "title": "Address Table",
    "top": "Switching",
-   "section": "AddressTable",
+   "section": "Address Table",
    "group": "Basic",
    "risk": "read",
    "url": "/base/system/fwd_db.html"
@@ -688,7 +688,7 @@
    "path": "base/system/aging.html",
    "title": "Dynamic Addresses",
    "top": "Switching",
-   "section": "AddressTable",
+   "section": "Address Table",
    "group": "Advanced",
    "risk": "read",
    "url": "/base/system/aging.html"
@@ -698,7 +698,7 @@
    "path": "switching/port_mac_locking/port_mac_locking_static.html",
    "title": "Static MAC Address",
    "top": "Switching",
-   "section": "AddressTable",
+   "section": "Address Table",
    "group": "Advanced",
    "risk": "read",
    "url": "/switching/port_mac_locking/port_mac_locking_static.html"
@@ -848,7 +848,7 @@
    "path": "routing/router_discovery/rtr_discovery_cfg.html",
    "title": "Router Discovery Configuration",
    "top": "Routing",
-   "section": "RouterDiscovery",
+   "section": "Router Discovery",
    "group": "",
    "risk": "write",
    "url": "/routing/router_discovery/rtr_discovery_cfg.html"
@@ -858,7 +858,7 @@
    "path": "routing/routing/route_configuration.html",
    "title": "Route Configuration",
    "top": "Routing",
-   "section": "RoutingTable",
+   "section": "Routing Table",
    "group": "",
    "risk": "write",
    "url": "/routing/routing/route_configuration.html"
@@ -1558,7 +1558,7 @@
    "path": "base/system/dual_image_cfg.html",
    "title": "Dual Image Configuration",
    "top": "Maintenance",
-   "section": "Filemanagement",
+   "section": "File Management",
    "group": "Dual Image",
    "risk": "destructive",
    "url": "/base/system/dual_image_cfg.html"
@@ -1568,7 +1568,7 @@
    "path": "base/system/image_status.html",
    "title": "Dual Image Status",
    "top": "Maintenance",
-   "section": "Filemanagement",
+   "section": "File Management",
    "group": "Dual Image",
    "risk": "read",
    "url": "/base/system/image_status.html"
