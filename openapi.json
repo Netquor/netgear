@@ -1,0 +1,4057 @@
+{
+ "openapi": "3.1.0",
+ "info": {
+  "title": "NETGEAR GS108Tv2 web UI",
+  "version": "1.0.0",
+  "description": "Unofficial description of the NETGEAR GS108Tv2 ProSAFE web UI as an HTTP contract. The switch has no JSON API: GET returns page HTML, and POST submits the page's own form back to the same path. POSTs are read-modify-write, so fetch the page, change the fields you care about, and submit everything else as rendered. Page paths come from the switch's own menu JavaScript; form bodies have not been captured yet. Run `discover` against your device, then regenerate, to fill in the field schemas. Operations marked destructive reboot the switch, restore factory defaults, or write firmware; call them deliberately. Not affiliated with NETGEAR."
+ },
+ "servers": [
+  {
+   "url": "http://192.0.2.10"
+  }
+ ],
+ "security": [
+  {
+   "cookieAuth": []
+  }
+ ],
+ "tags": [
+  {
+   "name": "Login"
+  },
+  {
+   "name": "System"
+  },
+  {
+   "name": "Switching"
+  },
+  {
+   "name": "Routing"
+  },
+  {
+   "name": "QoS"
+  },
+  {
+   "name": "Security"
+  },
+  {
+   "name": "Monitoring"
+  },
+  {
+   "name": "Maintenance"
+  },
+  {
+   "name": "Help"
+  }
+ ],
+ "paths": {
+  "/base/system/management/sysInfo.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "System Information",
+    "description": "GS108Tv2 page `base/system/management/sysInfo.html` (Management). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Management",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-management-sysinfo"
+   }
+  },
+  "/base/system/net_conn_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "IP Configuration",
+    "description": "GS108Tv2 page `base/system/net_conn_cfg.html` (Management). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Management",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-net-conn-cfg"
+   }
+  },
+  "/ipv6/ipv6/ipv6_config.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "IPv6 Network Configuration",
+    "description": "GS108Tv2 page `ipv6/ipv6/ipv6_config.html` (Management). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Management",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-ipv6-ipv6-ipv6-config"
+   }
+  },
+  "/ipv6/ipv6/ipv6_ndp_table.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "IPv6 Network Neighbor",
+    "description": "GS108Tv2 page `ipv6/ipv6/ipv6_ndp_table.html` (Management). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Management",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-ipv6-ipv6-ipv6-ndp-table"
+   }
+  },
+  "/base/sntp/sntp_global_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "SNTP Global Configuration",
+    "description": "GS108Tv2 page `base/sntp/sntp_global_cfg.html` (Management \u00b7 Time). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Management",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-sntp-sntp-global-cfg"
+   }
+  },
+  "/base/sntp/sntp_server_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "SNTP Server Configuration",
+    "description": "GS108Tv2 page `base/sntp/sntp_server_cfg.html` (Management \u00b7 Time). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Management",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-sntp-sntp-server-cfg"
+   }
+  },
+  "/base/system/dos/auto_dos_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "Auto-DoS Configuration",
+    "description": "GS108Tv2 page `base/system/dos/auto_dos_cfg.html` (Management \u00b7 Denial of Service). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Management",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-dos-auto-dos-cfg"
+   }
+  },
+  "/base/system/dos/dos_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "DoS Configuration",
+    "description": "GS108Tv2 page `base/system/dos/dos_cfg.html` (Management \u00b7 Denial of Service). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Management",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-dos-dos-cfg"
+   }
+  },
+  "/base/dns/dns_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "DNS Configuration",
+    "description": "GS108Tv2 page `base/dns/dns_cfg.html` (Management \u00b7 DNS). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Management",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-dns-dns-cfg"
+   }
+  },
+  "/base/dns/host_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "Host Configuration",
+    "description": "GS108Tv2 page `base/dns/host_cfg.html` (Management \u00b7 DNS). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Management",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-dns-host-cfg"
+   }
+  },
+  "/base/system/green_mode.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "Green Ethernet Configuration",
+    "description": "GS108Tv2 page `base/system/green_mode.html` (Management \u00b7 Green Ethernet). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Management",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-green-mode"
+   }
+  },
+  "/base/system/green_intf_mode.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "Green Ethernet Interface Configuration",
+    "description": "GS108Tv2 page `base/system/green_intf_mode.html` (Management \u00b7 Green Ethernet). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Management",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-green-intf-mode"
+   }
+  },
+  "/base/system/green_detail.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "Green Ethernet Detail",
+    "description": "GS108Tv2 page `base/system/green_detail.html` (Management \u00b7 Green Ethernet). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Management",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-green-detail"
+   }
+  },
+  "/base/system/green_summ.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "Green Ethernet Statistics Summary",
+    "description": "GS108Tv2 page `base/system/green_summ.html` (Management \u00b7 Green Ethernet). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Management",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-green-summ"
+   }
+  },
+  "/base/system/green_lpi_his.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "Green Ethernet LPI History",
+    "description": "GS108Tv2 page `base/system/green_lpi_his.html` (Management \u00b7 Green Ethernet). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Management",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-green-lpi-his"
+   }
+  },
+  "/switching/dhcp_filtering/dhcp_mode_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "Configuration",
+    "description": "GS108Tv2 page `switching/dhcp_filtering/dhcp_mode_cfg.html` (Services \u00b7 DHCP Filtering). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Services",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-dhcp-filtering-dhcp-mode-cfg"
+   }
+  },
+  "/switching/dhcp_filtering/dhcp_filtering_intf_mode.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "Interface Configuration",
+    "description": "GS108Tv2 page `switching/dhcp_filtering/dhcp_filtering_intf_mode.html` (Services \u00b7 DHCP Filtering). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Services",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-dhcp-filtering-dhcp-filtering-intf-mode"
+   }
+  },
+  "/routing/relay/relay_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "DHCP Relay",
+    "description": "GS108Tv2 page `routing/relay/relay_cfg.html` (Services \u00b7 DHCP Filtering). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Services",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-routing-relay-relay-cfg"
+   }
+  },
+  "/base/system/port/port_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "Port Configuration",
+    "description": "GS108Tv2 page `base/system/port/port_cfg.html` (Ports). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Ports",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-port-port-cfg"
+   }
+  },
+  "/base/system/flow_ctrl.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "Flow Control",
+    "description": "GS108Tv2 page `base/system/flow_ctrl.html` (Ports). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Ports",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-flow-ctrl"
+   }
+  },
+  "/switching/lag/trunk_info.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "LAG Configuration",
+    "description": "GS108Tv2 page `switching/lag/trunk_info.html` (LAG \u00b7 Basic). Risk: write.",
+    "x-risk": "write",
+    "x-section": "LAG",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-lag-trunk-info"
+   }
+  },
+  "/switching/lag/trunk_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "LAG Membership",
+    "description": "GS108Tv2 page `switching/lag/trunk_cfg.html` (LAG \u00b7 Basic). Risk: write.",
+    "x-risk": "write",
+    "x-section": "LAG",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-lag-trunk-cfg"
+   }
+  },
+  "/switching/lag/lacp_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "LACP Configuration",
+    "description": "GS108Tv2 page `switching/lag/lacp_cfg.html` (LAG \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "LAG",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-lag-lacp-cfg"
+   }
+  },
+  "/switching/lag/lacp_port_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "LACP Port Configuration",
+    "description": "GS108Tv2 page `switching/lag/lacp_port_cfg.html` (LAG \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "LAG",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-lag-lacp-port-cfg"
+   }
+  },
+  "/base/poe/poe_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "PoE Configuration",
+    "description": "GS108Tv2 page `base/poe/poe_cfg.html` (PoE \u00b7 Basic). Risk: write.",
+    "x-risk": "write",
+    "x-section": "PoE",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-poe-poe-cfg"
+   }
+  },
+  "/base/poe/poe_port_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "PoE Port Configuration",
+    "description": "GS108Tv2 page `base/poe/poe_port_cfg.html` (PoE \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "PoE",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-poe-poe-port-cfg"
+   }
+  },
+  "/base/poe/timer_glob_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "Timer Global Configuration",
+    "description": "GS108Tv2 page `base/poe/timer_glob_cfg.html` (PoE \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "PoE",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-poe-timer-glob-cfg"
+   }
+  },
+  "/base/poe/timer_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "Timer Schedule Configuration",
+    "description": "GS108Tv2 page `base/poe/timer_cfg.html` (PoE \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "PoE",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-poe-timer-cfg"
+   }
+  },
+  "/base/system/snmp/snmp_comm_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "Community Configuration",
+    "description": "GS108Tv2 page `base/system/snmp/snmp_comm_cfg.html` (SNMP \u00b7 SNMP V1/V2). Risk: write.",
+    "x-risk": "write",
+    "x-section": "SNMP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-snmp-snmp-comm-cfg"
+   }
+  },
+  "/base/system/snmp/trap_recvr_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "Trap Configuration",
+    "description": "GS108Tv2 page `base/system/snmp/trap_recvr_cfg.html` (SNMP \u00b7 SNMP V1/V2). Risk: write.",
+    "x-risk": "write",
+    "x-section": "SNMP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-snmp-trap-recvr-cfg"
+   }
+  },
+  "/base/system/trapmgr/trap_flags_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "Trap Flags",
+    "description": "GS108Tv2 page `base/system/trapmgr/trap_flags_cfg.html` (SNMP \u00b7 SNMP V1/V2). Risk: write.",
+    "x-risk": "write",
+    "x-section": "SNMP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-trapmgr-trap-flags-cfg"
+   }
+  },
+  "/base/system/snmp/snmp_v3_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "User Configuration",
+    "description": "GS108Tv2 page `base/system/snmp/snmp_v3_cfg.html` (SNMP \u00b7 SNMP V3). Risk: write.",
+    "x-risk": "write",
+    "x-section": "SNMP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-snmp-snmp-v3-cfg"
+   }
+  },
+  "/switching/lldp/lldp_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "LLDP Configuration",
+    "description": "GS108Tv2 page `switching/lldp/lldp_cfg.html` (LLDP \u00b7 Basic). Risk: write.",
+    "x-risk": "write",
+    "x-section": "LLDP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-lldp-lldp-cfg"
+   }
+  },
+  "/switching/lldp/lldp_intf_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "LLDP Port Settings",
+    "description": "GS108Tv2 page `switching/lldp/lldp_intf_cfg.html` (LLDP \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "LLDP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-lldp-lldp-intf-cfg"
+   }
+  },
+  "/switching/lldp/lldp_med/lldp_med_local_device_info.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "LLDP-MED Network Policy",
+    "description": "GS108Tv2 page `switching/lldp/lldp_med/lldp_med_local_device_info.html` (LLDP \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "LLDP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-lldp-lldp-med-lldp-med-local-device-info"
+   }
+  },
+  "/switching/lldp/lldp_med/lldp_med_intf_cfg.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "LLDP-MED Port Settings",
+    "description": "GS108Tv2 page `switching/lldp/lldp_med/lldp_med_intf_cfg.html` (LLDP \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "LLDP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-lldp-lldp-med-lldp-med-intf-cfg"
+   }
+  },
+  "/switching/lldp/lldp_localdevice.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "Local Information",
+    "description": "GS108Tv2 page `switching/lldp/lldp_localdevice.html` (LLDP \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "LLDP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-lldp-lldp-localdevice"
+   }
+  },
+  "/switching/lldp/lldp_neighbors.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "Neighbors Information",
+    "description": "GS108Tv2 page `switching/lldp/lldp_neighbors.html` (LLDP \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "LLDP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-lldp-lldp-neighbors"
+   }
+  },
+  "/base/system/license_base.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "Show License",
+    "description": "GS108Tv2 page `base/system/license_base.html` (License). Risk: action.",
+    "x-risk": "action",
+    "x-section": "License",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-license-base"
+   }
+  },
+  "/base/system/license_features.html": {
+   "get": {
+    "tags": [
+     "System"
+    ],
+    "summary": "License features",
+    "description": "GS108Tv2 page `base/system/license_features.html` (License). Risk: action.",
+    "x-risk": "action",
+    "x-section": "License",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-license-features"
+   }
+  },
+  "/switching/dot1q/vlan_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "VLAN Configuration",
+    "description": "GS108Tv2 page `switching/dot1q/vlan_cfg.html` (VLAN \u00b7 Basic). Risk: write.",
+    "x-risk": "write",
+    "x-section": "VLAN",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-dot1q-vlan-cfg"
+   }
+  },
+  "/switching/dot1q/vlan_port_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "VLAN Membership",
+    "description": "GS108Tv2 page `switching/dot1q/vlan_port_cfg.html` (VLAN \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "VLAN",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-dot1q-vlan-port-cfg"
+   }
+  },
+  "/switching/dot1q/qnp_port_cfg_rw.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "Port PVID Configuration",
+    "description": "GS108Tv2 page `switching/dot1q/qnp_port_cfg_rw.html` (VLAN \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "VLAN",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-dot1q-qnp-port-cfg-rw"
+   }
+  },
+  "/switching/auto_voip/auto_voip_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "Auto-VoIP",
+    "description": "GS108Tv2 page `switching/auto_voip/auto_voip_cfg.html` (AutoVoIP). Risk: write.",
+    "x-risk": "write",
+    "x-section": "AutoVoIP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-auto-voip-auto-voip-cfg"
+   }
+  },
+  "/qos/voip/voip_vlan_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "Properties",
+    "description": "GS108Tv2 page `qos/voip/voip_vlan_cfg.html` (VoiceVLAN \u00b7 Basic). Risk: write.",
+    "x-risk": "write",
+    "x-section": "VoiceVLAN",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-voip-voip-vlan-cfg"
+   }
+  },
+  "/qos/voip/voip_vlan_port_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "Port Setting",
+    "description": "GS108Tv2 page `qos/voip/voip_vlan_port_cfg.html` (VoiceVLAN \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "VoiceVLAN",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-voip-voip-vlan-port-cfg"
+   }
+  },
+  "/qos/voip/voip_vlan_oui.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "OUI",
+    "description": "GS108Tv2 page `qos/voip/voip_vlan_oui.html` (VoiceVLAN \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "VoiceVLAN",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-voip-voip-vlan-oui"
+   }
+  },
+  "/switching/spanning_tree/mstp_switch.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "STP Configuration",
+    "description": "GS108Tv2 page `switching/spanning_tree/mstp_switch.html` (STP \u00b7 Basic). Risk: write.",
+    "x-risk": "write",
+    "x-section": "STP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-spanning-tree-mstp-switch"
+   }
+  },
+  "/switching/spanning_tree/mstp_cist_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "CST Configuration",
+    "description": "GS108Tv2 page `switching/spanning_tree/mstp_cist_cfg.html` (STP \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "STP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-spanning-tree-mstp-cist-cfg"
+   }
+  },
+  "/switching/spanning_tree/cist_port_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "CST Port Configuration",
+    "description": "GS108Tv2 page `switching/spanning_tree/cist_port_cfg.html` (STP \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "STP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-spanning-tree-cist-port-cfg"
+   }
+  },
+  "/switching/spanning_tree/cst_port_status.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "CST Port Status",
+    "description": "GS108Tv2 page `switching/spanning_tree/cst_port_status.html` (STP \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "STP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-spanning-tree-cst-port-status"
+   }
+  },
+  "/switching/spanning_tree/rstp_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "RSTP",
+    "description": "GS108Tv2 page `switching/spanning_tree/rstp_cfg.html` (STP \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "STP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-spanning-tree-rstp-cfg"
+   }
+  },
+  "/switching/spanning_tree/mst_status.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "MST Configuration",
+    "description": "GS108Tv2 page `switching/spanning_tree/mst_status.html` (STP \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "STP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-spanning-tree-mst-status"
+   }
+  },
+  "/switching/spanning_tree/msti_port_status.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "MST Port Configuration",
+    "description": "GS108Tv2 page `switching/spanning_tree/msti_port_status.html` (STP \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "STP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-spanning-tree-msti-port-status"
+   }
+  },
+  "/switching/spanning_tree/mstp_stats.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "STP Statistics",
+    "description": "GS108Tv2 page `switching/spanning_tree/mstp_stats.html` (STP \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "STP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-spanning-tree-mstp-stats"
+   }
+  },
+  "/switching/igmp_snooping/auto_video_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "Auto-Video",
+    "description": "GS108Tv2 page `switching/igmp_snooping/auto_video_cfg.html` (Multicast). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Multicast",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-igmp-snooping-auto-video-cfg"
+   }
+  },
+  "/switching/igmp_snooping/igmp_snuping_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "IGMP Snooping Configuration",
+    "description": "GS108Tv2 page `switching/igmp_snooping/igmp_snuping_cfg.html` (Multicast \u00b7 IGMP Snooping). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Multicast",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-igmp-snooping-igmp-snuping-cfg"
+   }
+  },
+  "/switching/igmp_snooping/igmp_intf_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "IGMP Snooping Interface Configuration",
+    "description": "GS108Tv2 page `switching/igmp_snooping/igmp_intf_cfg.html` (Multicast \u00b7 IGMP Snooping). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Multicast",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-igmp-snooping-igmp-intf-cfg"
+   }
+  },
+  "/switching/mfdb/mfdb_igmp.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "IGMP Snooping Table",
+    "description": "GS108Tv2 page `switching/mfdb/mfdb_igmp.html` (Multicast \u00b7 IGMP Snooping). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Multicast",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-mfdb-mfdb-igmp"
+   }
+  },
+  "/switching/mfdb/mfdb_table.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "MFDB Table",
+    "description": "GS108Tv2 page `switching/mfdb/mfdb_table.html` (Multicast \u00b7 IGMP Snooping). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Multicast",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-mfdb-mfdb-table"
+   }
+  },
+  "/switching/mfdb/mfdb_stats.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "MFDB Statistics",
+    "description": "GS108Tv2 page `switching/mfdb/mfdb_stats.html` (Multicast \u00b7 IGMP Snooping). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Multicast",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-mfdb-mfdb-stats"
+   }
+  },
+  "/switching/igmp_snooping/igmp_vlan_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "IGMP Snooping VLAN Configuration",
+    "description": "GS108Tv2 page `switching/igmp_snooping/igmp_vlan_cfg.html` (Multicast \u00b7 IGMP Snooping). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Multicast",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-igmp-snooping-igmp-vlan-cfg"
+   }
+  },
+  "/switching/igmp_snooping/mul_router_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "Multicast Router Configuration",
+    "description": "GS108Tv2 page `switching/igmp_snooping/mul_router_cfg.html` (Multicast \u00b7 IGMP Snooping). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Multicast",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-igmp-snooping-mul-router-cfg"
+   }
+  },
+  "/switching/igmp_snooping/mul_vlan_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "Multicast Router VLAN Configuration",
+    "description": "GS108Tv2 page `switching/igmp_snooping/mul_vlan_cfg.html` (Multicast \u00b7 IGMP Snooping). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Multicast",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-igmp-snooping-mul-vlan-cfg"
+   }
+  },
+  "/switching/igmp_snooping/igmp_snuping_querier.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "Querier Configuration",
+    "description": "GS108Tv2 page `switching/igmp_snooping/igmp_snuping_querier.html` (Multicast \u00b7 IGMP Snooping Querier). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Multicast",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-igmp-snooping-igmp-snuping-querier"
+   }
+  },
+  "/switching/igmp_snooping/igmp_querier_vlan_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "Querier VLAN Configuration",
+    "description": "GS108Tv2 page `switching/igmp_snooping/igmp_querier_vlan_cfg.html` (Multicast \u00b7 IGMP Snooping Querier). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Multicast",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-igmp-snooping-igmp-querier-vlan-cfg"
+   }
+  },
+  "/switching/igmp_snooping/igmp_querier_vlan_status.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "Querier VLAN Status",
+    "description": "GS108Tv2 page `switching/igmp_snooping/igmp_querier_vlan_status.html` (Multicast \u00b7 IGMP Snooping Querier). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Multicast",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-igmp-snooping-igmp-querier-vlan-status"
+   }
+  },
+  "/base/system/fwd_db.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "Address Table",
+    "description": "GS108Tv2 page `base/system/fwd_db.html` (AddressTable \u00b7 Basic). Risk: read.",
+    "x-risk": "read",
+    "x-section": "AddressTable",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-fwd-db"
+   }
+  },
+  "/base/system/aging.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "Dynamic Addresses",
+    "description": "GS108Tv2 page `base/system/aging.html` (AddressTable \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "AddressTable",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-aging"
+   }
+  },
+  "/switching/port_mac_locking/port_mac_locking_static.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "Static MAC Address",
+    "description": "GS108Tv2 page `switching/port_mac_locking/port_mac_locking_static.html` (AddressTable \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "AddressTable",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-port-mac-locking-port-mac-locking-static"
+   }
+  },
+  "/switching/mrp/mrp_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "MRP Configuration",
+    "description": "GS108Tv2 page `switching/mrp/mrp_cfg.html` (MRP \u00b7 Basic). Risk: write.",
+    "x-risk": "write",
+    "x-section": "MRP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-mrp-mrp-cfg"
+   }
+  },
+  "/switching/mrp/mrp_port_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "Port Settings",
+    "description": "GS108Tv2 page `switching/mrp/mrp_port_cfg.html` (MRP \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "MRP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-mrp-mrp-port-cfg"
+   }
+  },
+  "/switching/mrp/mmrp_statistics.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "MMRP Statistics",
+    "description": "GS108Tv2 page `switching/mrp/mmrp_statistics.html` (MRP \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "MRP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-mrp-mmrp-statistics"
+   }
+  },
+  "/switching/mrp/msrp_statistics.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "MSRP Statistics",
+    "description": "GS108Tv2 page `switching/mrp/msrp_statistics.html` (MRP \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "MRP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-mrp-msrp-statistics"
+   }
+  },
+  "/switching/mrp/msrp_reservation_params.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "MSRP Reservation Parameters",
+    "description": "GS108Tv2 page `switching/mrp/msrp_reservation_params.html` (MRP \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "MRP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-mrp-msrp-reservation-params"
+   }
+  },
+  "/switching/mrp/qav_statistics.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "Qav Parameters",
+    "description": "GS108Tv2 page `switching/mrp/qav_statistics.html` (MRP \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "MRP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-mrp-qav-statistics"
+   }
+  },
+  "/switching/mrp/msrp_details.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "MSRP Streams Information",
+    "description": "GS108Tv2 page `switching/mrp/msrp_details.html` (MRP \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "MRP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-mrp-msrp-details"
+   }
+  },
+  "/switching/dot1as/dot1as_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "802.1AS Configuration",
+    "description": "GS108Tv2 page `switching/dot1as/dot1as_cfg.html` (802.1AS \u00b7 Basic). Risk: write.",
+    "x-risk": "write",
+    "x-section": "802.1AS",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-dot1as-dot1as-cfg"
+   }
+  },
+  "/switching/dot1as/dot1as_port_cfg.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "802.1AS Port Settings",
+    "description": "GS108Tv2 page `switching/dot1as/dot1as_port_cfg.html` (802.1AS \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "802.1AS",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-dot1as-dot1as-port-cfg"
+   }
+  },
+  "/switching/dot1as/dot1as_statistics.html": {
+   "get": {
+    "tags": [
+     "Switching"
+    ],
+    "summary": "802.1AS Statistics",
+    "description": "GS108Tv2 page `switching/dot1as/dot1as_statistics.html` (802.1AS \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "802.1AS",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-dot1as-dot1as-statistics"
+   }
+  },
+  "/routing/ip/ip_cfg.html": {
+   "get": {
+    "tags": [
+     "Routing"
+    ],
+    "summary": "IP Configuration",
+    "description": "GS108Tv2 page `routing/ip/ip_cfg.html` (IP). Risk: write.",
+    "x-risk": "write",
+    "x-section": "IP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-routing-ip-ip-cfg"
+   }
+  },
+  "/routing/vlan_routing/vlan_routing_wizard.html": {
+   "get": {
+    "tags": [
+     "Routing"
+    ],
+    "summary": "Routing Wizard",
+    "description": "GS108Tv2 page `routing/vlan_routing/vlan_routing_wizard.html` (IP). Risk: write.",
+    "x-risk": "write",
+    "x-section": "IP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-routing-vlan-routing-vlan-routing-wizard"
+   }
+  },
+  "/routing/ip/ip_stats_info.html": {
+   "get": {
+    "tags": [
+     "Routing"
+    ],
+    "summary": "Statistics",
+    "description": "GS108Tv2 page `routing/ip/ip_stats_info.html` (IP). Risk: read.",
+    "x-risk": "read",
+    "x-section": "IP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-routing-ip-ip-stats-info"
+   }
+  },
+  "/routing/vlan_routing/vlan_routing_cfg.html": {
+   "get": {
+    "tags": [
+     "Routing"
+    ],
+    "summary": "VLAN Routing",
+    "description": "GS108Tv2 page `routing/vlan_routing/vlan_routing_cfg.html` (VLAN). Risk: write.",
+    "x-risk": "write",
+    "x-section": "VLAN",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-routing-vlan-routing-vlan-routing-cfg"
+   }
+  },
+  "/routing/router_discovery/rtr_discovery_cfg.html": {
+   "get": {
+    "tags": [
+     "Routing"
+    ],
+    "summary": "Router Discovery Configuration",
+    "description": "GS108Tv2 page `routing/router_discovery/rtr_discovery_cfg.html` (RouterDiscovery). Risk: write.",
+    "x-risk": "write",
+    "x-section": "RouterDiscovery",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-routing-router-discovery-rtr-discovery-cfg"
+   }
+  },
+  "/routing/routing/route_configuration.html": {
+   "get": {
+    "tags": [
+     "Routing"
+    ],
+    "summary": "Route Configuration",
+    "description": "GS108Tv2 page `routing/routing/route_configuration.html` (RoutingTable). Risk: write.",
+    "x-risk": "write",
+    "x-section": "RoutingTable",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-routing-routing-route-configuration"
+   }
+  },
+  "/base/system/arp_cache.html": {
+   "get": {
+    "tags": [
+     "Routing"
+    ],
+    "summary": "ARP Cache",
+    "description": "GS108Tv2 page `base/system/arp_cache.html` (ARP \u00b7 Basic). Risk: read.",
+    "x-risk": "read",
+    "x-section": "ARP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-arp-cache"
+   }
+  },
+  "/routing/arp/arp_table_cfg.html": {
+   "get": {
+    "tags": [
+     "Routing"
+    ],
+    "summary": "Global ARP Configuration",
+    "description": "GS108Tv2 page `routing/arp/arp_table_cfg.html` (ARP \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "ARP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-routing-arp-arp-table-cfg"
+   }
+  },
+  "/routing/arp/arp_create1.html": {
+   "get": {
+    "tags": [
+     "Routing"
+    ],
+    "summary": "ARP Entry Configuration",
+    "description": "GS108Tv2 page `routing/arp/arp_create1.html` (ARP \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "ARP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-routing-arp-arp-create1"
+   }
+  },
+  "/routing/arp/arp_entry_mgmt.html": {
+   "get": {
+    "tags": [
+     "Routing"
+    ],
+    "summary": "ARP Entry Management",
+    "description": "GS108Tv2 page `routing/arp/arp_entry_mgmt.html` (ARP \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "ARP",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-routing-arp-arp-entry-mgmt"
+   }
+  },
+  "/qos/cos/cos_config.html": {
+   "get": {
+    "tags": [
+     "QoS"
+    ],
+    "summary": "CoS Configuration",
+    "description": "GS108Tv2 page `qos/cos/cos_config.html` (CoS \u00b7 Basic). Risk: write.",
+    "x-risk": "write",
+    "x-section": "CoS",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-cos-cos-config"
+   }
+  },
+  "/qos/cos/cos_intf_cfg.html": {
+   "get": {
+    "tags": [
+     "QoS"
+    ],
+    "summary": "CoS Interface Configuration",
+    "description": "GS108Tv2 page `qos/cos/cos_intf_cfg.html` (CoS \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "CoS",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-cos-cos-intf-cfg"
+   }
+  },
+  "/qos/cos/cos_intf_queue_cfg_rw.html": {
+   "get": {
+    "tags": [
+     "QoS"
+    ],
+    "summary": "Interface Queue Configuration",
+    "description": "GS108Tv2 page `qos/cos/cos_intf_queue_cfg_rw.html` (CoS \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "CoS",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-cos-cos-intf-queue-cfg-rw"
+   }
+  },
+  "/qos/cos/dot1p_map.html": {
+   "get": {
+    "tags": [
+     "QoS"
+    ],
+    "summary": "802.1p to Queue Mapping",
+    "description": "GS108Tv2 page `qos/cos/dot1p_map.html` (CoS \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "CoS",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-cos-dot1p-map"
+   }
+  },
+  "/qos/cos/dscp_map.html": {
+   "get": {
+    "tags": [
+     "QoS"
+    ],
+    "summary": "DSCP to Queue Mapping",
+    "description": "GS108Tv2 page `qos/cos/dscp_map.html` (CoS \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "CoS",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-cos-dscp-map"
+   }
+  },
+  "/qos/diffserv/diffserv_cfg.html": {
+   "get": {
+    "tags": [
+     "QoS"
+    ],
+    "summary": "DiffServ Configuration",
+    "description": "GS108Tv2 page `qos/diffserv/diffserv_cfg.html` (DiffServ \u00b7 Basic). Risk: write.",
+    "x-risk": "write",
+    "x-section": "DiffServ",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-diffserv-diffserv-cfg"
+   }
+  },
+  "/qos/diffserv/class_configuration.html": {
+   "get": {
+    "tags": [
+     "QoS"
+    ],
+    "summary": "Class Configuration",
+    "description": "GS108Tv2 page `qos/diffserv/class_configuration.html` (DiffServ \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "DiffServ",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-diffserv-class-configuration"
+   }
+  },
+  "/qos/diffserv/class_ipv6Configuration.html": {
+   "get": {
+    "tags": [
+     "QoS"
+    ],
+    "summary": "IPv6 Class Configuration",
+    "description": "GS108Tv2 page `qos/diffserv/class_ipv6Configuration.html` (DiffServ \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "DiffServ",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-diffserv-class-ipv6configuration"
+   }
+  },
+  "/qos/diffserv/policy_cfg.html": {
+   "get": {
+    "tags": [
+     "QoS"
+    ],
+    "summary": "Policy Configuration",
+    "description": "GS108Tv2 page `qos/diffserv/policy_cfg.html` (DiffServ \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "DiffServ",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-diffserv-policy-cfg"
+   }
+  },
+  "/qos/diffserv/service_cfg.html": {
+   "get": {
+    "tags": [
+     "QoS"
+    ],
+    "summary": "Service Configuration",
+    "description": "GS108Tv2 page `qos/diffserv/service_cfg.html` (DiffServ \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "DiffServ",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-diffserv-service-cfg"
+   }
+  },
+  "/qos/diffserv/service_summ.html": {
+   "get": {
+    "tags": [
+     "QoS"
+    ],
+    "summary": "Service Statistics",
+    "description": "GS108Tv2 page `qos/diffserv/service_summ.html` (DiffServ \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "DiffServ",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-diffserv-service-summ"
+   }
+  },
+  "/base/system/change_passwd.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "Change Password",
+    "description": "GS108Tv2 page `base/system/change_passwd.html` (Management Security \u00b7 User Configuration). Risk: destructive.",
+    "x-risk": "destructive",
+    "x-section": "Management Security",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-change-passwd"
+   }
+  },
+  "/security/radius/radius_config.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "Global Configuration",
+    "description": "GS108Tv2 page `security/radius/radius_config.html` (Management Security \u00b7 RADIUS). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Management Security",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-security-radius-radius-config"
+   }
+  },
+  "/security/radius/radius_server.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "Server Configuration",
+    "description": "GS108Tv2 page `security/radius/radius_server.html` (Management Security \u00b7 RADIUS). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Management Security",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-security-radius-radius-server"
+   }
+  },
+  "/security/radius/radius_acct_server.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "Accounting Server Configuration",
+    "description": "GS108Tv2 page `security/radius/radius_acct_server.html` (Management Security \u00b7 RADIUS). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Management Security",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-security-radius-radius-acct-server"
+   }
+  },
+  "/security/tacacs/tacacs_cfg.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "TACACS+ Configuration",
+    "description": "GS108Tv2 page `security/tacacs/tacacs_cfg.html` (Management Security \u00b7 TACACS+). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Management Security",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-security-tacacs-tacacs-cfg"
+   }
+  },
+  "/security/tacacs/tacacs_server_cfg.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "Server Configuration",
+    "description": "GS108Tv2 page `security/tacacs/tacacs_server_cfg.html` (Management Security \u00b7 TACACS+). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Management Security",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-security-tacacs-tacacs-server-cfg"
+   }
+  },
+  "/base/system/user_mgr/apl_cfg.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "Authentication List",
+    "description": "GS108Tv2 page `base/system/user_mgr/apl_cfg.html` (Management Security \u00b7 TACACS+). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Management Security",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-user-mgr-apl-cfg"
+   }
+  },
+  "/base/system/http_cfg.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "HTTP Configuration",
+    "description": "GS108Tv2 page `base/system/http_cfg.html` (Access \u00b7 HTTP). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Access",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-http-cfg"
+   }
+  },
+  "/base/system/https_cfg.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "HTTPS Configuration",
+    "description": "GS108Tv2 page `base/system/https_cfg.html` (Access \u00b7 HTTPS). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Access",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-https-cfg"
+   }
+  },
+  "/security/ssl/certificate_download.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "Certificate Download",
+    "description": "GS108Tv2 page `security/ssl/certificate_download.html` (Access \u00b7 HTTPS). Risk: action.",
+    "x-risk": "action",
+    "x-section": "Access",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-security-ssl-certificate-download"
+   }
+  },
+  "/base/system/user_mgr/profile_config.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "Access Profile Configuration",
+    "description": "GS108Tv2 page `base/system/user_mgr/profile_config.html` (Access \u00b7 Access Control). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Access",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-user-mgr-profile-config"
+   }
+  },
+  "/base/system/user_mgr/rule_config.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "Access Rule Configuration",
+    "description": "GS108Tv2 page `base/system/user_mgr/rule_config.html` (Access \u00b7 Access Control). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Access",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-user-mgr-rule-config"
+   }
+  },
+  "/security/dot1x/dot1x_config.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "802.1X Configuration",
+    "description": "GS108Tv2 page `security/dot1x/dot1x_config.html` (Port Authentication \u00b7 Basic). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Port Authentication",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-security-dot1x-dot1x-config"
+   }
+  },
+  "/security/dot1x/dot1x_port_cfg.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "Port Authentication",
+    "description": "GS108Tv2 page `security/dot1x/dot1x_port_cfg.html` (Port Authentication \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Port Authentication",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-security-dot1x-dot1x-port-cfg"
+   }
+  },
+  "/security/dot1x/dot1x_summ.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "Port Summary",
+    "description": "GS108Tv2 page `security/dot1x/dot1x_summ.html` (Port Authentication \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Port Authentication",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-security-dot1x-dot1x-summ"
+   }
+  },
+  "/switching/filters/mac_filter_cfg.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "MAC Filter Configuration",
+    "description": "GS108Tv2 page `switching/filters/mac_filter_cfg.html` (Traffic Control \u00b7 MAC Filter). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Traffic Control",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-filters-mac-filter-cfg"
+   }
+  },
+  "/switching/filters/mac_filter_summ.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "MAC Filter Summary",
+    "description": "GS108Tv2 page `switching/filters/mac_filter_summ.html` (Traffic Control \u00b7 MAC Filter). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Traffic Control",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-filters-mac-filter-summ"
+   }
+  },
+  "/base/system/switch_cfg.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "Storm Control",
+    "description": "GS108Tv2 page `base/system/switch_cfg.html` (Traffic Control \u00b7 MAC Filter). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Traffic Control",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-switch-cfg"
+   }
+  },
+  "/switching/port_mac_locking/port_mac_locking_cfg.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "Port Security Configuration",
+    "description": "GS108Tv2 page `switching/port_mac_locking/port_mac_locking_cfg.html` (Traffic Control \u00b7 Port Security). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Traffic Control",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-port-mac-locking-port-mac-locking-cfg"
+   }
+  },
+  "/switching/port_mac_locking/port_mac_locking_setup.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "Interface Configuration",
+    "description": "GS108Tv2 page `switching/port_mac_locking/port_mac_locking_setup.html` (Traffic Control \u00b7 Port Security). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Traffic Control",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-port-mac-locking-port-mac-locking-setup"
+   }
+  },
+  "/switching/port_mac_locking/port_mac_locking_dynamic.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "Security MAC Address",
+    "description": "GS108Tv2 page `switching/port_mac_locking/port_mac_locking_dynamic.html` (Traffic Control \u00b7 Port Security). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Traffic Control",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-port-mac-locking-port-mac-locking-dynamic"
+   }
+  },
+  "/switching/protected_ports/protected_ports.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "Protected Ports",
+    "description": "GS108Tv2 page `switching/protected_ports/protected_ports.html` (Traffic Control \u00b7 Port Security). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Traffic Control",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-switching-protected-ports-protected-ports"
+   }
+  },
+  "/security/acl_wizard/acl_wizard.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "ACL Wizard",
+    "description": "GS108Tv2 page `security/acl_wizard/acl_wizard.html` (ACL). Risk: write.",
+    "x-risk": "write",
+    "x-section": "ACL",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-security-acl-wizard-acl-wizard"
+   }
+  },
+  "/qos/acl/mac_acl/mac_acl_cfg.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "MAC ACL",
+    "description": "GS108Tv2 page `qos/acl/mac_acl/mac_acl_cfg.html` (ACL \u00b7 Basic). Risk: write.",
+    "x-risk": "write",
+    "x-section": "ACL",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-acl-mac-acl-mac-acl-cfg"
+   }
+  },
+  "/qos/acl/mac_acl/mac_acl_rule_cfg_rw.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "MAC Rules",
+    "description": "GS108Tv2 page `qos/acl/mac_acl/mac_acl_rule_cfg_rw.html` (ACL \u00b7 Basic). Risk: write.",
+    "x-risk": "write",
+    "x-section": "ACL",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-acl-mac-acl-mac-acl-rule-cfg-rw"
+   }
+  },
+  "/qos/acl/mac_ip_acl_cfg.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "MAC Binding Configuration",
+    "description": "GS108Tv2 page `qos/acl/mac_ip_acl_cfg.html` (ACL \u00b7 Basic). Risk: write.",
+    "x-risk": "write",
+    "x-section": "ACL",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-acl-mac-ip-acl-cfg"
+   }
+  },
+  "/qos/acl/mac_acl/mac_binding_table.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "Binding Table",
+    "description": "GS108Tv2 page `qos/acl/mac_acl/mac_binding_table.html` (ACL \u00b7 Basic). Risk: read.",
+    "x-risk": "read",
+    "x-section": "ACL",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-acl-mac-acl-mac-binding-table"
+   }
+  },
+  "/qos/acl/acl_config.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "IP ACL",
+    "description": "GS108Tv2 page `qos/acl/acl_config.html` (ACL \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "ACL",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-acl-acl-config"
+   }
+  },
+  "/qos/acl/acl_rule_cfg.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "IP Rules",
+    "description": "GS108Tv2 page `qos/acl/acl_rule_cfg.html` (ACL \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "ACL",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-acl-acl-rule-cfg"
+   }
+  },
+  "/qos/acl/acl_ext_rule_cfg.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "IP Extended Rules",
+    "description": "GS108Tv2 page `qos/acl/acl_ext_rule_cfg.html` (ACL \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "ACL",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-acl-acl-ext-rule-cfg"
+   }
+  },
+  "/qos/acl/ipv6_acl_config.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "IPv6 ACL",
+    "description": "GS108Tv2 page `qos/acl/ipv6_acl_config.html` (ACL \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "ACL",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-acl-ipv6-acl-config"
+   }
+  },
+  "/qos/acl/ipv6_acl_rule_cfg.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "IPv6 Rules",
+    "description": "GS108Tv2 page `qos/acl/ipv6_acl_rule_cfg.html` (ACL \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "ACL",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-acl-ipv6-acl-rule-cfg"
+   }
+  },
+  "/qos/acl/ip_mac_acl_cfg.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "IP Binding Configuration",
+    "description": "GS108Tv2 page `qos/acl/ip_mac_acl_cfg.html` (ACL \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "ACL",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-acl-ip-mac-acl-cfg"
+   }
+  },
+  "/qos/acl/ip_binding_table.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "Binding Table",
+    "description": "GS108Tv2 page `qos/acl/ip_binding_table.html` (ACL \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "ACL",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-acl-ip-binding-table"
+   }
+  },
+  "/qos/acl/vlan_acl_cfg.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "VLAN ACL Configuration",
+    "description": "GS108Tv2 page `qos/acl/vlan_acl_cfg.html` (ACL \u00b7 Advanced). Risk: write.",
+    "x-risk": "write",
+    "x-section": "ACL",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-acl-vlan-acl-cfg"
+   }
+  },
+  "/qos/acl/acl_intf_vlan_summary.html": {
+   "get": {
+    "tags": [
+     "Security"
+    ],
+    "summary": "ACL Interface/VLAN Summary",
+    "description": "GS108Tv2 page `qos/acl/acl_intf_vlan_summary.html` (ACL \u00b7 Advanced). Risk: read.",
+    "x-risk": "read",
+    "x-section": "ACL",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-qos-acl-acl-intf-vlan-summary"
+   }
+  },
+  "/base/system/stats/stats_switch.html": {
+   "get": {
+    "tags": [
+     "Monitoring"
+    ],
+    "summary": "Switch Statistics",
+    "description": "GS108Tv2 page `base/system/stats/stats_switch.html` (Ports). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Ports",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-stats-stats-switch"
+   }
+  },
+  "/base/system/stats/statsport_summ.html": {
+   "get": {
+    "tags": [
+     "Monitoring"
+    ],
+    "summary": "Port Statistics",
+    "description": "GS108Tv2 page `base/system/stats/statsport_summ.html` (Ports). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Ports",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-stats-statsport-summ"
+   }
+  },
+  "/base/system/stats/stats_port.html": {
+   "get": {
+    "tags": [
+     "Monitoring"
+    ],
+    "summary": "Port Detailed Statistics",
+    "description": "GS108Tv2 page `base/system/stats/stats_port.html` (Ports). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Ports",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-stats-stats-port"
+   }
+  },
+  "/security/dot1x/eapStatistics.html": {
+   "get": {
+    "tags": [
+     "Monitoring"
+    ],
+    "summary": "EAP Statistics",
+    "description": "GS108Tv2 page `security/dot1x/eapStatistics.html` (Ports). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Ports",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-security-dot1x-eapstatistics"
+   }
+  },
+  "/base/system/port/cableTest.html": {
+   "get": {
+    "tags": [
+     "Monitoring"
+    ],
+    "summary": "Cable Test",
+    "description": "GS108Tv2 page `base/system/port/cableTest.html` (Ports). Risk: action.",
+    "x-risk": "action",
+    "x-section": "Ports",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-port-cabletest"
+   }
+  },
+  "/base/system/log/inmemory_cfg.html": {
+   "get": {
+    "tags": [
+     "Monitoring"
+    ],
+    "summary": "Memory Logs",
+    "description": "GS108Tv2 page `base/system/log/inmemory_cfg.html` (Logs). Risk: action.",
+    "x-risk": "action",
+    "x-section": "Logs",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-log-inmemory-cfg"
+   }
+  },
+  "/base/system/log/persistent_cfg.html": {
+   "get": {
+    "tags": [
+     "Monitoring"
+    ],
+    "summary": "FLASH Logs",
+    "description": "GS108Tv2 page `base/system/log/persistent_cfg.html` (Logs). Risk: action.",
+    "x-risk": "action",
+    "x-section": "Logs",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-log-persistent-cfg"
+   }
+  },
+  "/base/system/log/syslog_cfg.html": {
+   "get": {
+    "tags": [
+     "Monitoring"
+    ],
+    "summary": "Server Logs",
+    "description": "GS108Tv2 page `base/system/log/syslog_cfg.html` (Logs). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Logs",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-log-syslog-cfg"
+   }
+  },
+  "/base/system/trapmgr/trap_log.html": {
+   "get": {
+    "tags": [
+     "Monitoring"
+    ],
+    "summary": "Trap Logs",
+    "description": "GS108Tv2 page `base/system/trapmgr/trap_log.html` (Logs). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Logs",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-trapmgr-trap-log"
+   }
+  },
+  "/base/system/event_log.html": {
+   "get": {
+    "tags": [
+     "Monitoring"
+    ],
+    "summary": "Event Logs",
+    "description": "GS108Tv2 page `base/system/event_log.html` (Logs). Risk: action.",
+    "x-risk": "action",
+    "x-section": "Logs",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-event-log"
+   }
+  },
+  "/base/system/port/multiple_port_mirror.html": {
+   "get": {
+    "tags": [
+     "Monitoring"
+    ],
+    "summary": "Port Mirroring",
+    "description": "GS108Tv2 page `base/system/port/multiple_port_mirror.html` (Mirroring). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Mirroring",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-port-multiple-port-mirror"
+   }
+  },
+  "/base/system/save_changes.html": {
+   "get": {
+    "tags": [
+     "Maintenance"
+    ],
+    "summary": "Save Configuration",
+    "description": "GS108Tv2 page `base/system/save_changes.html` (Save Configuration). Risk: write.",
+    "x-risk": "write",
+    "x-section": "Save Configuration",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-save-changes"
+   }
+  },
+  "/base/system/sys_reset.html": {
+   "get": {
+    "tags": [
+     "Maintenance"
+    ],
+    "summary": "Device Reboot",
+    "description": "GS108Tv2 page `base/system/sys_reset.html` (Reset). Risk: destructive.",
+    "x-risk": "destructive",
+    "x-section": "Reset",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-sys-reset"
+   }
+  },
+  "/base/system/reset_cfg.html": {
+   "get": {
+    "tags": [
+     "Maintenance"
+    ],
+    "summary": "Factory Default",
+    "description": "GS108Tv2 page `base/system/reset_cfg.html` (Reset). Risk: destructive.",
+    "x-risk": "destructive",
+    "x-section": "Reset",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-reset-cfg"
+   }
+  },
+  "/base/system/file_upload.html": {
+   "get": {
+    "tags": [
+     "Maintenance"
+    ],
+    "summary": "TFTP File Upload",
+    "description": "GS108Tv2 page `base/system/file_upload.html` (Upload). Risk: destructive.",
+    "x-risk": "destructive",
+    "x-section": "Upload",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-file-upload"
+   }
+  },
+  "/base/system/http_file_upload.html": {
+   "get": {
+    "tags": [
+     "Maintenance"
+    ],
+    "summary": "HTTP File Upload",
+    "description": "GS108Tv2 page `base/system/http_file_upload.html` (Upload). Risk: destructive.",
+    "x-risk": "destructive",
+    "x-section": "Upload",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-http-file-upload"
+   }
+  },
+  "/base/system/file_download.html": {
+   "get": {
+    "tags": [
+     "Maintenance"
+    ],
+    "summary": "TFTP File Download",
+    "description": "GS108Tv2 page `base/system/file_download.html` (Download). Risk: action.",
+    "x-risk": "action",
+    "x-section": "Download",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-file-download"
+   }
+  },
+  "/base/system/http_file_download.html": {
+   "get": {
+    "tags": [
+     "Maintenance"
+    ],
+    "summary": "HTTP File Download",
+    "description": "GS108Tv2 page `base/system/http_file_download.html` (Download). Risk: action.",
+    "x-risk": "action",
+    "x-section": "Download",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-http-file-download"
+   }
+  },
+  "/base/system/dual_image_cfg.html": {
+   "get": {
+    "tags": [
+     "Maintenance"
+    ],
+    "summary": "Dual Image Configuration",
+    "description": "GS108Tv2 page `base/system/dual_image_cfg.html` (Filemanagement \u00b7 Dual Image). Risk: destructive.",
+    "x-risk": "destructive",
+    "x-section": "Filemanagement",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-dual-image-cfg"
+   }
+  },
+  "/base/system/image_status.html": {
+   "get": {
+    "tags": [
+     "Maintenance"
+    ],
+    "summary": "Dual Image Status",
+    "description": "GS108Tv2 page `base/system/image_status.html` (Filemanagement \u00b7 Dual Image). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Filemanagement",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-image-status"
+   }
+  },
+  "/base/system/ping.html": {
+   "get": {
+    "tags": [
+     "Maintenance"
+    ],
+    "summary": "Ping",
+    "description": "GS108Tv2 page `base/system/ping.html` (Troubleshooting). Risk: action.",
+    "x-risk": "action",
+    "x-section": "Troubleshooting",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-ping"
+   }
+  },
+  "/ipv6/ipv6/ping_ipv6.html": {
+   "get": {
+    "tags": [
+     "Maintenance"
+    ],
+    "summary": "Ping IPv6",
+    "description": "GS108Tv2 page `ipv6/ipv6/ping_ipv6.html` (Troubleshooting). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Troubleshooting",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-ipv6-ipv6-ping-ipv6"
+   }
+  },
+  "/base/system/traceroute.html": {
+   "get": {
+    "tags": [
+     "Maintenance"
+    ],
+    "summary": "Traceroute",
+    "description": "GS108Tv2 page `base/system/traceroute.html` (Troubleshooting). Risk: action.",
+    "x-risk": "action",
+    "x-section": "Troubleshooting",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-system-traceroute"
+   }
+  },
+  "/base/support.html": {
+   "get": {
+    "tags": [
+     "Help"
+    ],
+    "summary": "Support",
+    "description": "GS108Tv2 page `base/support.html` (Online Help). Risk: action.",
+    "x-risk": "action",
+    "x-section": "Online Help",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-support"
+   }
+  },
+  "/base/userGuide.html": {
+   "get": {
+    "tags": [
+     "Help"
+    ],
+    "summary": "User Guide",
+    "description": "GS108Tv2 page `base/userGuide.html` (Online Help). Risk: read.",
+    "x-risk": "read",
+    "x-section": "Online Help",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-userguide"
+   }
+  },
+  "/base/prodRegistration/registration.html": {
+   "get": {
+    "tags": [
+     "Help"
+    ],
+    "summary": "Registration",
+    "description": "GS108Tv2 page `base/prodRegistration/registration.html` (Registration). Risk: action.",
+    "x-risk": "action",
+    "x-section": "Registration",
+    "responses": {
+     "200": {
+      "description": "Page HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    },
+    "operationId": "get-base-prodregistration-registration"
+   }
+  },
+  "/base/main_login.html": {
+   "post": {
+    "tags": [
+     "Login"
+    ],
+    "summary": "Log in",
+    "description": "Sets the session cookie. On success the device returns 302 to /base/web_main.html; on failure it returns the login page with err_flag=1.",
+    "security": [],
+    "operationId": "post-login",
+    "requestBody": {
+     "content": {
+      "application/x-www-form-urlencoded": {
+       "schema": {
+        "type": "object",
+        "properties": {
+         "pwd": {
+          "type": "string",
+          "description": "Admin password."
+         },
+         "err_flag": {
+          "type": "string",
+          "default": "0"
+         },
+         "err_msg": {
+          "type": "string",
+          "default": ""
+         },
+         "login.x": {
+          "type": "string",
+          "default": "10"
+         },
+         "login.y": {
+          "type": "string",
+          "default": "10"
+         }
+        },
+        "required": [
+         "pwd"
+        ]
+       }
+      }
+     }
+    },
+    "responses": {
+     "302": {
+      "description": "Login accepted.",
+      "headers": {
+       "Location": {
+        "schema": {
+         "type": "string"
+        }
+       }
+      }
+     },
+     "200": {
+      "description": "Login rejected; HTML carries err_msg."
+     }
+    }
+   },
+   "get": {
+    "tags": [
+     "Login"
+    ],
+    "summary": "Login page",
+    "security": [],
+    "operationId": "get-login-page",
+    "responses": {
+     "200": {
+      "description": "Login HTML.",
+      "content": {
+       "text/html": {
+        "schema": {
+         "$ref": "#/components/schemas/HtmlPage"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "components": {
+  "securitySchemes": {
+   "cookieAuth": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Cookie",
+    "description": "Session cookie issued by POST /base/main_login.html. The client stores it automatically; its name is chosen by the device."
+   }
+  },
+  "schemas": {
+   "HtmlPage": {
+    "type": "string",
+    "description": "Server-rendered HTML page."
+   }
+  }
+ }
+}

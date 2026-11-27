@@ -1,0 +1,1637 @@
+{
+ "source": "/base/js/tabs_Layer2.js",
+ "menu_sha": "5111d7cb78ac2129",
+ "count": 163,
+ "pages": [
+  {
+   "id": "base-system-management-sysinfo",
+   "path": "base/system/management/sysInfo.html",
+   "title": "System Information",
+   "top": "System",
+   "section": "Management",
+   "group": "",
+   "risk": "read",
+   "url": "/base/system/management/sysInfo.html"
+  },
+  {
+   "id": "base-system-net-conn-cfg",
+   "path": "base/system/net_conn_cfg.html",
+   "title": "IP Configuration",
+   "top": "System",
+   "section": "Management",
+   "group": "",
+   "risk": "write",
+   "url": "/base/system/net_conn_cfg.html"
+  },
+  {
+   "id": "ipv6-ipv6-ipv6-config",
+   "path": "ipv6/ipv6/ipv6_config.html",
+   "title": "IPv6 Network Configuration",
+   "top": "System",
+   "section": "Management",
+   "group": "",
+   "risk": "write",
+   "url": "/ipv6/ipv6/ipv6_config.html"
+  },
+  {
+   "id": "ipv6-ipv6-ipv6-ndp-table",
+   "path": "ipv6/ipv6/ipv6_ndp_table.html",
+   "title": "IPv6 Network Neighbor",
+   "top": "System",
+   "section": "Management",
+   "group": "",
+   "risk": "read",
+   "url": "/ipv6/ipv6/ipv6_ndp_table.html"
+  },
+  {
+   "id": "base-sntp-sntp-global-cfg",
+   "path": "base/sntp/sntp_global_cfg.html",
+   "title": "SNTP Global Configuration",
+   "top": "System",
+   "section": "Management",
+   "group": "Time",
+   "risk": "write",
+   "url": "/base/sntp/sntp_global_cfg.html"
+  },
+  {
+   "id": "base-sntp-sntp-server-cfg",
+   "path": "base/sntp/sntp_server_cfg.html",
+   "title": "SNTP Server Configuration",
+   "top": "System",
+   "section": "Management",
+   "group": "Time",
+   "risk": "write",
+   "url": "/base/sntp/sntp_server_cfg.html"
+  },
+  {
+   "id": "base-system-dos-auto-dos-cfg",
+   "path": "base/system/dos/auto_dos_cfg.html",
+   "title": "Auto-DoS Configuration",
+   "top": "System",
+   "section": "Management",
+   "group": "Denial of Service",
+   "risk": "write",
+   "url": "/base/system/dos/auto_dos_cfg.html"
+  },
+  {
+   "id": "base-system-dos-dos-cfg",
+   "path": "base/system/dos/dos_cfg.html",
+   "title": "DoS Configuration",
+   "top": "System",
+   "section": "Management",
+   "group": "Denial of Service",
+   "risk": "write",
+   "url": "/base/system/dos/dos_cfg.html"
+  },
+  {
+   "id": "base-dns-dns-cfg",
+   "path": "base/dns/dns_cfg.html",
+   "title": "DNS Configuration",
+   "top": "System",
+   "section": "Management",
+   "group": "DNS",
+   "risk": "write",
+   "url": "/base/dns/dns_cfg.html"
+  },
+  {
+   "id": "base-dns-host-cfg",
+   "path": "base/dns/host_cfg.html",
+   "title": "Host Configuration",
+   "top": "System",
+   "section": "Management",
+   "group": "DNS",
+   "risk": "write",
+   "url": "/base/dns/host_cfg.html"
+  },
+  {
+   "id": "base-system-green-mode",
+   "path": "base/system/green_mode.html",
+   "title": "Green Ethernet Configuration",
+   "top": "System",
+   "section": "Management",
+   "group": "Green Ethernet",
+   "risk": "write",
+   "url": "/base/system/green_mode.html"
+  },
+  {
+   "id": "base-system-green-intf-mode",
+   "path": "base/system/green_intf_mode.html",
+   "title": "Green Ethernet Interface Configuration",
+   "top": "System",
+   "section": "Management",
+   "group": "Green Ethernet",
+   "risk": "write",
+   "url": "/base/system/green_intf_mode.html"
+  },
+  {
+   "id": "base-system-green-detail",
+   "path": "base/system/green_detail.html",
+   "title": "Green Ethernet Detail",
+   "top": "System",
+   "section": "Management",
+   "group": "Green Ethernet",
+   "risk": "read",
+   "url": "/base/system/green_detail.html"
+  },
+  {
+   "id": "base-system-green-summ",
+   "path": "base/system/green_summ.html",
+   "title": "Green Ethernet Statistics Summary",
+   "top": "System",
+   "section": "Management",
+   "group": "Green Ethernet",
+   "risk": "read",
+   "url": "/base/system/green_summ.html"
+  },
+  {
+   "id": "base-system-green-lpi-his",
+   "path": "base/system/green_lpi_his.html",
+   "title": "Green Ethernet LPI History",
+   "top": "System",
+   "section": "Management",
+   "group": "Green Ethernet",
+   "risk": "read",
+   "url": "/base/system/green_lpi_his.html"
+  },
+  {
+   "id": "switching-dhcp-filtering-dhcp-mode-cfg",
+   "path": "switching/dhcp_filtering/dhcp_mode_cfg.html",
+   "title": "Configuration",
+   "top": "System",
+   "section": "Services",
+   "group": "DHCP Filtering",
+   "risk": "write",
+   "url": "/switching/dhcp_filtering/dhcp_mode_cfg.html"
+  },
+  {
+   "id": "switching-dhcp-filtering-dhcp-filtering-intf-mode",
+   "path": "switching/dhcp_filtering/dhcp_filtering_intf_mode.html",
+   "title": "Interface Configuration",
+   "top": "System",
+   "section": "Services",
+   "group": "DHCP Filtering",
+   "risk": "write",
+   "url": "/switching/dhcp_filtering/dhcp_filtering_intf_mode.html"
+  },
+  {
+   "id": "routing-relay-relay-cfg",
+   "path": "routing/relay/relay_cfg.html",
+   "title": "DHCP Relay",
+   "top": "System",
+   "section": "Services",
+   "group": "DHCP Filtering",
+   "risk": "write",
+   "url": "/routing/relay/relay_cfg.html"
+  },
+  {
+   "id": "base-system-port-port-cfg",
+   "path": "base/system/port/port_cfg.html",
+   "title": "Port Configuration",
+   "top": "Switching",
+   "section": "Ports",
+   "group": "",
+   "risk": "write",
+   "url": "/base/system/port/port_cfg.html"
+  },
+  {
+   "id": "base-system-flow-ctrl",
+   "path": "base/system/flow_ctrl.html",
+   "title": "Flow Control",
+   "top": "Switching",
+   "section": "Ports",
+   "group": "",
+   "risk": "read",
+   "url": "/base/system/flow_ctrl.html"
+  },
+  {
+   "id": "switching-lag-trunk-info",
+   "path": "switching/lag/trunk_info.html",
+   "title": "LAG Configuration",
+   "top": "Switching",
+   "section": "LAG",
+   "group": "Basic",
+   "risk": "write",
+   "url": "/switching/lag/trunk_info.html"
+  },
+  {
+   "id": "switching-lag-trunk-cfg",
+   "path": "switching/lag/trunk_cfg.html",
+   "title": "LAG Membership",
+   "top": "Switching",
+   "section": "LAG",
+   "group": "Basic",
+   "risk": "write",
+   "url": "/switching/lag/trunk_cfg.html"
+  },
+  {
+   "id": "switching-lag-lacp-cfg",
+   "path": "switching/lag/lacp_cfg.html",
+   "title": "LACP Configuration",
+   "top": "Switching",
+   "section": "LAG",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/switching/lag/lacp_cfg.html"
+  },
+  {
+   "id": "switching-lag-lacp-port-cfg",
+   "path": "switching/lag/lacp_port_cfg.html",
+   "title": "LACP Port Configuration",
+   "top": "Switching",
+   "section": "LAG",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/switching/lag/lacp_port_cfg.html"
+  },
+  {
+   "id": "base-poe-poe-cfg",
+   "path": "base/poe/poe_cfg.html",
+   "title": "PoE Configuration",
+   "top": "System",
+   "section": "PoE",
+   "group": "Basic",
+   "risk": "write",
+   "url": "/base/poe/poe_cfg.html"
+  },
+  {
+   "id": "base-poe-poe-port-cfg",
+   "path": "base/poe/poe_port_cfg.html",
+   "title": "PoE Port Configuration",
+   "top": "System",
+   "section": "PoE",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/base/poe/poe_port_cfg.html"
+  },
+  {
+   "id": "base-poe-timer-glob-cfg",
+   "path": "base/poe/timer_glob_cfg.html",
+   "title": "Timer Global Configuration",
+   "top": "System",
+   "section": "PoE",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/base/poe/timer_glob_cfg.html"
+  },
+  {
+   "id": "base-poe-timer-cfg",
+   "path": "base/poe/timer_cfg.html",
+   "title": "Timer Schedule Configuration",
+   "top": "System",
+   "section": "PoE",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/base/poe/timer_cfg.html"
+  },
+  {
+   "id": "base-system-snmp-snmp-comm-cfg",
+   "path": "base/system/snmp/snmp_comm_cfg.html",
+   "title": "Community Configuration",
+   "top": "System",
+   "section": "SNMP",
+   "group": "SNMP V1/V2",
+   "risk": "write",
+   "url": "/base/system/snmp/snmp_comm_cfg.html"
+  },
+  {
+   "id": "base-system-snmp-trap-recvr-cfg",
+   "path": "base/system/snmp/trap_recvr_cfg.html",
+   "title": "Trap Configuration",
+   "top": "System",
+   "section": "SNMP",
+   "group": "SNMP V1/V2",
+   "risk": "write",
+   "url": "/base/system/snmp/trap_recvr_cfg.html"
+  },
+  {
+   "id": "base-system-trapmgr-trap-flags-cfg",
+   "path": "base/system/trapmgr/trap_flags_cfg.html",
+   "title": "Trap Flags",
+   "top": "System",
+   "section": "SNMP",
+   "group": "SNMP V1/V2",
+   "risk": "write",
+   "url": "/base/system/trapmgr/trap_flags_cfg.html"
+  },
+  {
+   "id": "base-system-snmp-snmp-v3-cfg",
+   "path": "base/system/snmp/snmp_v3_cfg.html",
+   "title": "User Configuration",
+   "top": "System",
+   "section": "SNMP",
+   "group": "SNMP V3",
+   "risk": "write",
+   "url": "/base/system/snmp/snmp_v3_cfg.html"
+  },
+  {
+   "id": "switching-lldp-lldp-cfg",
+   "path": "switching/lldp/lldp_cfg.html",
+   "title": "LLDP Configuration",
+   "top": "System",
+   "section": "LLDP",
+   "group": "Basic",
+   "risk": "write",
+   "url": "/switching/lldp/lldp_cfg.html"
+  },
+  {
+   "id": "switching-lldp-lldp-intf-cfg",
+   "path": "switching/lldp/lldp_intf_cfg.html",
+   "title": "LLDP Port Settings",
+   "top": "System",
+   "section": "LLDP",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/switching/lldp/lldp_intf_cfg.html"
+  },
+  {
+   "id": "switching-lldp-lldp-med-lldp-med-local-device-info",
+   "path": "switching/lldp/lldp_med/lldp_med_local_device_info.html",
+   "title": "LLDP-MED Network Policy",
+   "top": "System",
+   "section": "LLDP",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/switching/lldp/lldp_med/lldp_med_local_device_info.html"
+  },
+  {
+   "id": "switching-lldp-lldp-med-lldp-med-intf-cfg",
+   "path": "switching/lldp/lldp_med/lldp_med_intf_cfg.html",
+   "title": "LLDP-MED Port Settings",
+   "top": "System",
+   "section": "LLDP",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/switching/lldp/lldp_med/lldp_med_intf_cfg.html"
+  },
+  {
+   "id": "switching-lldp-lldp-localdevice",
+   "path": "switching/lldp/lldp_localdevice.html",
+   "title": "Local Information",
+   "top": "System",
+   "section": "LLDP",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/switching/lldp/lldp_localdevice.html"
+  },
+  {
+   "id": "switching-lldp-lldp-neighbors",
+   "path": "switching/lldp/lldp_neighbors.html",
+   "title": "Neighbors Information",
+   "top": "System",
+   "section": "LLDP",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/switching/lldp/lldp_neighbors.html"
+  },
+  {
+   "id": "base-system-license-base",
+   "path": "base/system/license_base.html",
+   "title": "Show License",
+   "top": "System",
+   "section": "License",
+   "group": "",
+   "risk": "action",
+   "url": "/base/system/license_base.html"
+  },
+  {
+   "id": "base-system-license-features",
+   "path": "base/system/license_features.html",
+   "title": "License features",
+   "top": "System",
+   "section": "License",
+   "group": "",
+   "risk": "action",
+   "url": "/base/system/license_features.html"
+  },
+  {
+   "id": "switching-dot1q-vlan-cfg",
+   "path": "switching/dot1q/vlan_cfg.html",
+   "title": "VLAN Configuration",
+   "top": "Switching",
+   "section": "VLAN",
+   "group": "Basic",
+   "risk": "write",
+   "url": "/switching/dot1q/vlan_cfg.html"
+  },
+  {
+   "id": "switching-dot1q-vlan-port-cfg",
+   "path": "switching/dot1q/vlan_port_cfg.html",
+   "title": "VLAN Membership",
+   "top": "Switching",
+   "section": "VLAN",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/switching/dot1q/vlan_port_cfg.html"
+  },
+  {
+   "id": "switching-dot1q-qnp-port-cfg-rw",
+   "path": "switching/dot1q/qnp_port_cfg_rw.html",
+   "title": "Port PVID Configuration",
+   "top": "Switching",
+   "section": "VLAN",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/switching/dot1q/qnp_port_cfg_rw.html"
+  },
+  {
+   "id": "switching-auto-voip-auto-voip-cfg",
+   "path": "switching/auto_voip/auto_voip_cfg.html",
+   "title": "Auto-VoIP",
+   "top": "Switching",
+   "section": "AutoVoIP",
+   "group": "",
+   "risk": "write",
+   "url": "/switching/auto_voip/auto_voip_cfg.html"
+  },
+  {
+   "id": "qos-voip-voip-vlan-cfg",
+   "path": "qos/voip/voip_vlan_cfg.html",
+   "title": "Properties",
+   "top": "Switching",
+   "section": "VoiceVLAN",
+   "group": "Basic",
+   "risk": "write",
+   "url": "/qos/voip/voip_vlan_cfg.html"
+  },
+  {
+   "id": "qos-voip-voip-vlan-port-cfg",
+   "path": "qos/voip/voip_vlan_port_cfg.html",
+   "title": "Port Setting",
+   "top": "Switching",
+   "section": "VoiceVLAN",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/qos/voip/voip_vlan_port_cfg.html"
+  },
+  {
+   "id": "qos-voip-voip-vlan-oui",
+   "path": "qos/voip/voip_vlan_oui.html",
+   "title": "OUI",
+   "top": "Switching",
+   "section": "VoiceVLAN",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/qos/voip/voip_vlan_oui.html"
+  },
+  {
+   "id": "switching-spanning-tree-mstp-switch",
+   "path": "switching/spanning_tree/mstp_switch.html",
+   "title": "STP Configuration",
+   "top": "Switching",
+   "section": "STP",
+   "group": "Basic",
+   "risk": "write",
+   "url": "/switching/spanning_tree/mstp_switch.html"
+  },
+  {
+   "id": "switching-spanning-tree-mstp-cist-cfg",
+   "path": "switching/spanning_tree/mstp_cist_cfg.html",
+   "title": "CST Configuration",
+   "top": "Switching",
+   "section": "STP",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/switching/spanning_tree/mstp_cist_cfg.html"
+  },
+  {
+   "id": "switching-spanning-tree-cist-port-cfg",
+   "path": "switching/spanning_tree/cist_port_cfg.html",
+   "title": "CST Port Configuration",
+   "top": "Switching",
+   "section": "STP",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/switching/spanning_tree/cist_port_cfg.html"
+  },
+  {
+   "id": "switching-spanning-tree-cst-port-status",
+   "path": "switching/spanning_tree/cst_port_status.html",
+   "title": "CST Port Status",
+   "top": "Switching",
+   "section": "STP",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/switching/spanning_tree/cst_port_status.html"
+  },
+  {
+   "id": "switching-spanning-tree-rstp-cfg",
+   "path": "switching/spanning_tree/rstp_cfg.html",
+   "title": "RSTP",
+   "top": "Switching",
+   "section": "STP",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/switching/spanning_tree/rstp_cfg.html"
+  },
+  {
+   "id": "switching-spanning-tree-mst-status",
+   "path": "switching/spanning_tree/mst_status.html",
+   "title": "MST Configuration",
+   "top": "Switching",
+   "section": "STP",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/switching/spanning_tree/mst_status.html"
+  },
+  {
+   "id": "switching-spanning-tree-msti-port-status",
+   "path": "switching/spanning_tree/msti_port_status.html",
+   "title": "MST Port Configuration",
+   "top": "Switching",
+   "section": "STP",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/switching/spanning_tree/msti_port_status.html"
+  },
+  {
+   "id": "switching-spanning-tree-mstp-stats",
+   "path": "switching/spanning_tree/mstp_stats.html",
+   "title": "STP Statistics",
+   "top": "Switching",
+   "section": "STP",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/switching/spanning_tree/mstp_stats.html"
+  },
+  {
+   "id": "switching-igmp-snooping-auto-video-cfg",
+   "path": "switching/igmp_snooping/auto_video_cfg.html",
+   "title": "Auto-Video",
+   "top": "Switching",
+   "section": "Multicast",
+   "group": "",
+   "risk": "write",
+   "url": "/switching/igmp_snooping/auto_video_cfg.html"
+  },
+  {
+   "id": "switching-igmp-snooping-igmp-snuping-cfg",
+   "path": "switching/igmp_snooping/igmp_snuping_cfg.html",
+   "title": "IGMP Snooping Configuration",
+   "top": "Switching",
+   "section": "Multicast",
+   "group": "IGMP Snooping",
+   "risk": "write",
+   "url": "/switching/igmp_snooping/igmp_snuping_cfg.html"
+  },
+  {
+   "id": "switching-igmp-snooping-igmp-intf-cfg",
+   "path": "switching/igmp_snooping/igmp_intf_cfg.html",
+   "title": "IGMP Snooping Interface Configuration",
+   "top": "Switching",
+   "section": "Multicast",
+   "group": "IGMP Snooping",
+   "risk": "write",
+   "url": "/switching/igmp_snooping/igmp_intf_cfg.html"
+  },
+  {
+   "id": "switching-mfdb-mfdb-igmp",
+   "path": "switching/mfdb/mfdb_igmp.html",
+   "title": "IGMP Snooping Table",
+   "top": "Switching",
+   "section": "Multicast",
+   "group": "IGMP Snooping",
+   "risk": "read",
+   "url": "/switching/mfdb/mfdb_igmp.html"
+  },
+  {
+   "id": "switching-mfdb-mfdb-table",
+   "path": "switching/mfdb/mfdb_table.html",
+   "title": "MFDB Table",
+   "top": "Switching",
+   "section": "Multicast",
+   "group": "IGMP Snooping",
+   "risk": "read",
+   "url": "/switching/mfdb/mfdb_table.html"
+  },
+  {
+   "id": "switching-mfdb-mfdb-stats",
+   "path": "switching/mfdb/mfdb_stats.html",
+   "title": "MFDB Statistics",
+   "top": "Switching",
+   "section": "Multicast",
+   "group": "IGMP Snooping",
+   "risk": "read",
+   "url": "/switching/mfdb/mfdb_stats.html"
+  },
+  {
+   "id": "switching-igmp-snooping-igmp-vlan-cfg",
+   "path": "switching/igmp_snooping/igmp_vlan_cfg.html",
+   "title": "IGMP Snooping VLAN Configuration",
+   "top": "Switching",
+   "section": "Multicast",
+   "group": "IGMP Snooping",
+   "risk": "write",
+   "url": "/switching/igmp_snooping/igmp_vlan_cfg.html"
+  },
+  {
+   "id": "switching-igmp-snooping-mul-router-cfg",
+   "path": "switching/igmp_snooping/mul_router_cfg.html",
+   "title": "Multicast Router Configuration",
+   "top": "Switching",
+   "section": "Multicast",
+   "group": "IGMP Snooping",
+   "risk": "write",
+   "url": "/switching/igmp_snooping/mul_router_cfg.html"
+  },
+  {
+   "id": "switching-igmp-snooping-mul-vlan-cfg",
+   "path": "switching/igmp_snooping/mul_vlan_cfg.html",
+   "title": "Multicast Router VLAN Configuration",
+   "top": "Switching",
+   "section": "Multicast",
+   "group": "IGMP Snooping",
+   "risk": "write",
+   "url": "/switching/igmp_snooping/mul_vlan_cfg.html"
+  },
+  {
+   "id": "switching-igmp-snooping-igmp-snuping-querier",
+   "path": "switching/igmp_snooping/igmp_snuping_querier.html",
+   "title": "Querier Configuration",
+   "top": "Switching",
+   "section": "Multicast",
+   "group": "IGMP Snooping Querier",
+   "risk": "write",
+   "url": "/switching/igmp_snooping/igmp_snuping_querier.html"
+  },
+  {
+   "id": "switching-igmp-snooping-igmp-querier-vlan-cfg",
+   "path": "switching/igmp_snooping/igmp_querier_vlan_cfg.html",
+   "title": "Querier VLAN Configuration",
+   "top": "Switching",
+   "section": "Multicast",
+   "group": "IGMP Snooping Querier",
+   "risk": "write",
+   "url": "/switching/igmp_snooping/igmp_querier_vlan_cfg.html"
+  },
+  {
+   "id": "switching-igmp-snooping-igmp-querier-vlan-status",
+   "path": "switching/igmp_snooping/igmp_querier_vlan_status.html",
+   "title": "Querier VLAN Status",
+   "top": "Switching",
+   "section": "Multicast",
+   "group": "IGMP Snooping Querier",
+   "risk": "read",
+   "url": "/switching/igmp_snooping/igmp_querier_vlan_status.html"
+  },
+  {
+   "id": "base-system-fwd-db",
+   "path": "base/system/fwd_db.html",
+   "title": "Address Table",
+   "top": "Switching",
+   "section": "AddressTable",
+   "group": "Basic",
+   "risk": "read",
+   "url": "/base/system/fwd_db.html"
+  },
+  {
+   "id": "base-system-aging",
+   "path": "base/system/aging.html",
+   "title": "Dynamic Addresses",
+   "top": "Switching",
+   "section": "AddressTable",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/base/system/aging.html"
+  },
+  {
+   "id": "switching-port-mac-locking-port-mac-locking-static",
+   "path": "switching/port_mac_locking/port_mac_locking_static.html",
+   "title": "Static MAC Address",
+   "top": "Switching",
+   "section": "AddressTable",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/switching/port_mac_locking/port_mac_locking_static.html"
+  },
+  {
+   "id": "switching-mrp-mrp-cfg",
+   "path": "switching/mrp/mrp_cfg.html",
+   "title": "MRP Configuration",
+   "top": "Switching",
+   "section": "MRP",
+   "group": "Basic",
+   "risk": "write",
+   "url": "/switching/mrp/mrp_cfg.html"
+  },
+  {
+   "id": "switching-mrp-mrp-port-cfg",
+   "path": "switching/mrp/mrp_port_cfg.html",
+   "title": "Port Settings",
+   "top": "Switching",
+   "section": "MRP",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/switching/mrp/mrp_port_cfg.html"
+  },
+  {
+   "id": "switching-mrp-mmrp-statistics",
+   "path": "switching/mrp/mmrp_statistics.html",
+   "title": "MMRP Statistics",
+   "top": "Switching",
+   "section": "MRP",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/switching/mrp/mmrp_statistics.html"
+  },
+  {
+   "id": "switching-mrp-msrp-statistics",
+   "path": "switching/mrp/msrp_statistics.html",
+   "title": "MSRP Statistics",
+   "top": "Switching",
+   "section": "MRP",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/switching/mrp/msrp_statistics.html"
+  },
+  {
+   "id": "switching-mrp-msrp-reservation-params",
+   "path": "switching/mrp/msrp_reservation_params.html",
+   "title": "MSRP Reservation Parameters",
+   "top": "Switching",
+   "section": "MRP",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/switching/mrp/msrp_reservation_params.html"
+  },
+  {
+   "id": "switching-mrp-qav-statistics",
+   "path": "switching/mrp/qav_statistics.html",
+   "title": "Qav Parameters",
+   "top": "Switching",
+   "section": "MRP",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/switching/mrp/qav_statistics.html"
+  },
+  {
+   "id": "switching-mrp-msrp-details",
+   "path": "switching/mrp/msrp_details.html",
+   "title": "MSRP Streams Information",
+   "top": "Switching",
+   "section": "MRP",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/switching/mrp/msrp_details.html"
+  },
+  {
+   "id": "switching-dot1as-dot1as-cfg",
+   "path": "switching/dot1as/dot1as_cfg.html",
+   "title": "802.1AS Configuration",
+   "top": "Switching",
+   "section": "802.1AS",
+   "group": "Basic",
+   "risk": "write",
+   "url": "/switching/dot1as/dot1as_cfg.html"
+  },
+  {
+   "id": "switching-dot1as-dot1as-port-cfg",
+   "path": "switching/dot1as/dot1as_port_cfg.html",
+   "title": "802.1AS Port Settings",
+   "top": "Switching",
+   "section": "802.1AS",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/switching/dot1as/dot1as_port_cfg.html"
+  },
+  {
+   "id": "switching-dot1as-dot1as-statistics",
+   "path": "switching/dot1as/dot1as_statistics.html",
+   "title": "802.1AS Statistics",
+   "top": "Switching",
+   "section": "802.1AS",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/switching/dot1as/dot1as_statistics.html"
+  },
+  {
+   "id": "routing-ip-ip-cfg",
+   "path": "routing/ip/ip_cfg.html",
+   "title": "IP Configuration",
+   "top": "Routing",
+   "section": "IP",
+   "group": "",
+   "risk": "write",
+   "url": "/routing/ip/ip_cfg.html"
+  },
+  {
+   "id": "routing-vlan-routing-vlan-routing-wizard",
+   "path": "routing/vlan_routing/vlan_routing_wizard.html",
+   "title": "Routing Wizard",
+   "top": "Routing",
+   "section": "IP",
+   "group": "",
+   "risk": "write",
+   "url": "/routing/vlan_routing/vlan_routing_wizard.html"
+  },
+  {
+   "id": "routing-ip-ip-stats-info",
+   "path": "routing/ip/ip_stats_info.html",
+   "title": "Statistics",
+   "top": "Routing",
+   "section": "IP",
+   "group": "",
+   "risk": "read",
+   "url": "/routing/ip/ip_stats_info.html"
+  },
+  {
+   "id": "routing-vlan-routing-vlan-routing-cfg",
+   "path": "routing/vlan_routing/vlan_routing_cfg.html",
+   "title": "VLAN Routing",
+   "top": "Routing",
+   "section": "VLAN",
+   "group": "",
+   "risk": "write",
+   "url": "/routing/vlan_routing/vlan_routing_cfg.html"
+  },
+  {
+   "id": "routing-router-discovery-rtr-discovery-cfg",
+   "path": "routing/router_discovery/rtr_discovery_cfg.html",
+   "title": "Router Discovery Configuration",
+   "top": "Routing",
+   "section": "RouterDiscovery",
+   "group": "",
+   "risk": "write",
+   "url": "/routing/router_discovery/rtr_discovery_cfg.html"
+  },
+  {
+   "id": "routing-routing-route-configuration",
+   "path": "routing/routing/route_configuration.html",
+   "title": "Route Configuration",
+   "top": "Routing",
+   "section": "RoutingTable",
+   "group": "",
+   "risk": "write",
+   "url": "/routing/routing/route_configuration.html"
+  },
+  {
+   "id": "base-system-arp-cache",
+   "path": "base/system/arp_cache.html",
+   "title": "ARP Cache",
+   "top": "Routing",
+   "section": "ARP",
+   "group": "Basic",
+   "risk": "read",
+   "url": "/base/system/arp_cache.html"
+  },
+  {
+   "id": "routing-arp-arp-table-cfg",
+   "path": "routing/arp/arp_table_cfg.html",
+   "title": "Global ARP Configuration",
+   "top": "Routing",
+   "section": "ARP",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/routing/arp/arp_table_cfg.html"
+  },
+  {
+   "id": "routing-arp-arp-create1",
+   "path": "routing/arp/arp_create1.html",
+   "title": "ARP Entry Configuration",
+   "top": "Routing",
+   "section": "ARP",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/routing/arp/arp_create1.html"
+  },
+  {
+   "id": "routing-arp-arp-entry-mgmt",
+   "path": "routing/arp/arp_entry_mgmt.html",
+   "title": "ARP Entry Management",
+   "top": "Routing",
+   "section": "ARP",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/routing/arp/arp_entry_mgmt.html"
+  },
+  {
+   "id": "qos-cos-cos-config",
+   "path": "qos/cos/cos_config.html",
+   "title": "CoS Configuration",
+   "top": "QoS",
+   "section": "CoS",
+   "group": "Basic",
+   "risk": "write",
+   "url": "/qos/cos/cos_config.html"
+  },
+  {
+   "id": "qos-cos-cos-intf-cfg",
+   "path": "qos/cos/cos_intf_cfg.html",
+   "title": "CoS Interface Configuration",
+   "top": "QoS",
+   "section": "CoS",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/qos/cos/cos_intf_cfg.html"
+  },
+  {
+   "id": "qos-cos-cos-intf-queue-cfg-rw",
+   "path": "qos/cos/cos_intf_queue_cfg_rw.html",
+   "title": "Interface Queue Configuration",
+   "top": "QoS",
+   "section": "CoS",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/qos/cos/cos_intf_queue_cfg_rw.html"
+  },
+  {
+   "id": "qos-cos-dot1p-map",
+   "path": "qos/cos/dot1p_map.html",
+   "title": "802.1p to Queue Mapping",
+   "top": "QoS",
+   "section": "CoS",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/qos/cos/dot1p_map.html"
+  },
+  {
+   "id": "qos-cos-dscp-map",
+   "path": "qos/cos/dscp_map.html",
+   "title": "DSCP to Queue Mapping",
+   "top": "QoS",
+   "section": "CoS",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/qos/cos/dscp_map.html"
+  },
+  {
+   "id": "qos-diffserv-diffserv-cfg",
+   "path": "qos/diffserv/diffserv_cfg.html",
+   "title": "DiffServ Configuration",
+   "top": "QoS",
+   "section": "DiffServ",
+   "group": "Basic",
+   "risk": "write",
+   "url": "/qos/diffserv/diffserv_cfg.html"
+  },
+  {
+   "id": "qos-diffserv-class-configuration",
+   "path": "qos/diffserv/class_configuration.html",
+   "title": "Class Configuration",
+   "top": "QoS",
+   "section": "DiffServ",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/qos/diffserv/class_configuration.html"
+  },
+  {
+   "id": "qos-diffserv-class-ipv6configuration",
+   "path": "qos/diffserv/class_ipv6Configuration.html",
+   "title": "IPv6 Class Configuration",
+   "top": "QoS",
+   "section": "DiffServ",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/qos/diffserv/class_ipv6Configuration.html"
+  },
+  {
+   "id": "qos-diffserv-policy-cfg",
+   "path": "qos/diffserv/policy_cfg.html",
+   "title": "Policy Configuration",
+   "top": "QoS",
+   "section": "DiffServ",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/qos/diffserv/policy_cfg.html"
+  },
+  {
+   "id": "qos-diffserv-service-cfg",
+   "path": "qos/diffserv/service_cfg.html",
+   "title": "Service Configuration",
+   "top": "QoS",
+   "section": "DiffServ",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/qos/diffserv/service_cfg.html"
+  },
+  {
+   "id": "qos-diffserv-service-summ",
+   "path": "qos/diffserv/service_summ.html",
+   "title": "Service Statistics",
+   "top": "QoS",
+   "section": "DiffServ",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/qos/diffserv/service_summ.html"
+  },
+  {
+   "id": "base-system-change-passwd",
+   "path": "base/system/change_passwd.html",
+   "title": "Change Password",
+   "top": "Security",
+   "section": "Management Security",
+   "group": "User Configuration",
+   "risk": "destructive",
+   "url": "/base/system/change_passwd.html"
+  },
+  {
+   "id": "security-radius-radius-config",
+   "path": "security/radius/radius_config.html",
+   "title": "Global Configuration",
+   "top": "Security",
+   "section": "Management Security",
+   "group": "RADIUS",
+   "risk": "write",
+   "url": "/security/radius/radius_config.html"
+  },
+  {
+   "id": "security-radius-radius-server",
+   "path": "security/radius/radius_server.html",
+   "title": "Server Configuration",
+   "top": "Security",
+   "section": "Management Security",
+   "group": "RADIUS",
+   "risk": "write",
+   "url": "/security/radius/radius_server.html"
+  },
+  {
+   "id": "security-radius-radius-acct-server",
+   "path": "security/radius/radius_acct_server.html",
+   "title": "Accounting Server Configuration",
+   "top": "Security",
+   "section": "Management Security",
+   "group": "RADIUS",
+   "risk": "write",
+   "url": "/security/radius/radius_acct_server.html"
+  },
+  {
+   "id": "security-tacacs-tacacs-cfg",
+   "path": "security/tacacs/tacacs_cfg.html",
+   "title": "TACACS+ Configuration",
+   "top": "Security",
+   "section": "Management Security",
+   "group": "TACACS+",
+   "risk": "write",
+   "url": "/security/tacacs/tacacs_cfg.html"
+  },
+  {
+   "id": "security-tacacs-tacacs-server-cfg",
+   "path": "security/tacacs/tacacs_server_cfg.html",
+   "title": "Server Configuration",
+   "top": "Security",
+   "section": "Management Security",
+   "group": "TACACS+",
+   "risk": "write",
+   "url": "/security/tacacs/tacacs_server_cfg.html"
+  },
+  {
+   "id": "base-system-user-mgr-apl-cfg",
+   "path": "base/system/user_mgr/apl_cfg.html",
+   "title": "Authentication List",
+   "top": "Security",
+   "section": "Management Security",
+   "group": "TACACS+",
+   "risk": "write",
+   "url": "/base/system/user_mgr/apl_cfg.html"
+  },
+  {
+   "id": "base-system-http-cfg",
+   "path": "base/system/http_cfg.html",
+   "title": "HTTP Configuration",
+   "top": "Security",
+   "section": "Access",
+   "group": "HTTP",
+   "risk": "write",
+   "url": "/base/system/http_cfg.html"
+  },
+  {
+   "id": "base-system-https-cfg",
+   "path": "base/system/https_cfg.html",
+   "title": "HTTPS Configuration",
+   "top": "Security",
+   "section": "Access",
+   "group": "HTTPS",
+   "risk": "write",
+   "url": "/base/system/https_cfg.html"
+  },
+  {
+   "id": "security-ssl-certificate-download",
+   "path": "security/ssl/certificate_download.html",
+   "title": "Certificate Download",
+   "top": "Security",
+   "section": "Access",
+   "group": "HTTPS",
+   "risk": "action",
+   "url": "/security/ssl/certificate_download.html"
+  },
+  {
+   "id": "base-system-user-mgr-profile-config",
+   "path": "base/system/user_mgr/profile_config.html",
+   "title": "Access Profile Configuration",
+   "top": "Security",
+   "section": "Access",
+   "group": "Access Control",
+   "risk": "write",
+   "url": "/base/system/user_mgr/profile_config.html"
+  },
+  {
+   "id": "base-system-user-mgr-rule-config",
+   "path": "base/system/user_mgr/rule_config.html",
+   "title": "Access Rule Configuration",
+   "top": "Security",
+   "section": "Access",
+   "group": "Access Control",
+   "risk": "write",
+   "url": "/base/system/user_mgr/rule_config.html"
+  },
+  {
+   "id": "security-dot1x-dot1x-config",
+   "path": "security/dot1x/dot1x_config.html",
+   "title": "802.1X Configuration",
+   "top": "Security",
+   "section": "Port Authentication",
+   "group": "Basic",
+   "risk": "write",
+   "url": "/security/dot1x/dot1x_config.html"
+  },
+  {
+   "id": "security-dot1x-dot1x-port-cfg",
+   "path": "security/dot1x/dot1x_port_cfg.html",
+   "title": "Port Authentication",
+   "top": "Security",
+   "section": "Port Authentication",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/security/dot1x/dot1x_port_cfg.html"
+  },
+  {
+   "id": "security-dot1x-dot1x-summ",
+   "path": "security/dot1x/dot1x_summ.html",
+   "title": "Port Summary",
+   "top": "Security",
+   "section": "Port Authentication",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/security/dot1x/dot1x_summ.html"
+  },
+  {
+   "id": "switching-filters-mac-filter-cfg",
+   "path": "switching/filters/mac_filter_cfg.html",
+   "title": "MAC Filter Configuration",
+   "top": "Security",
+   "section": "Traffic Control",
+   "group": "MAC Filter",
+   "risk": "write",
+   "url": "/switching/filters/mac_filter_cfg.html"
+  },
+  {
+   "id": "switching-filters-mac-filter-summ",
+   "path": "switching/filters/mac_filter_summ.html",
+   "title": "MAC Filter Summary",
+   "top": "Security",
+   "section": "Traffic Control",
+   "group": "MAC Filter",
+   "risk": "read",
+   "url": "/switching/filters/mac_filter_summ.html"
+  },
+  {
+   "id": "base-system-switch-cfg",
+   "path": "base/system/switch_cfg.html",
+   "title": "Storm Control",
+   "top": "Security",
+   "section": "Traffic Control",
+   "group": "MAC Filter",
+   "risk": "write",
+   "url": "/base/system/switch_cfg.html"
+  },
+  {
+   "id": "switching-port-mac-locking-port-mac-locking-cfg",
+   "path": "switching/port_mac_locking/port_mac_locking_cfg.html",
+   "title": "Port Security Configuration",
+   "top": "Security",
+   "section": "Traffic Control",
+   "group": "Port Security",
+   "risk": "write",
+   "url": "/switching/port_mac_locking/port_mac_locking_cfg.html"
+  },
+  {
+   "id": "switching-port-mac-locking-port-mac-locking-setup",
+   "path": "switching/port_mac_locking/port_mac_locking_setup.html",
+   "title": "Interface Configuration",
+   "top": "Security",
+   "section": "Traffic Control",
+   "group": "Port Security",
+   "risk": "write",
+   "url": "/switching/port_mac_locking/port_mac_locking_setup.html"
+  },
+  {
+   "id": "switching-port-mac-locking-port-mac-locking-dynamic",
+   "path": "switching/port_mac_locking/port_mac_locking_dynamic.html",
+   "title": "Security MAC Address",
+   "top": "Security",
+   "section": "Traffic Control",
+   "group": "Port Security",
+   "risk": "read",
+   "url": "/switching/port_mac_locking/port_mac_locking_dynamic.html"
+  },
+  {
+   "id": "switching-protected-ports-protected-ports",
+   "path": "switching/protected_ports/protected_ports.html",
+   "title": "Protected Ports",
+   "top": "Security",
+   "section": "Traffic Control",
+   "group": "Port Security",
+   "risk": "read",
+   "url": "/switching/protected_ports/protected_ports.html"
+  },
+  {
+   "id": "security-acl-wizard-acl-wizard",
+   "path": "security/acl_wizard/acl_wizard.html",
+   "title": "ACL Wizard",
+   "top": "Security",
+   "section": "ACL",
+   "group": "",
+   "risk": "write",
+   "url": "/security/acl_wizard/acl_wizard.html"
+  },
+  {
+   "id": "qos-acl-mac-acl-mac-acl-cfg",
+   "path": "qos/acl/mac_acl/mac_acl_cfg.html",
+   "title": "MAC ACL",
+   "top": "Security",
+   "section": "ACL",
+   "group": "Basic",
+   "risk": "write",
+   "url": "/qos/acl/mac_acl/mac_acl_cfg.html"
+  },
+  {
+   "id": "qos-acl-mac-acl-mac-acl-rule-cfg-rw",
+   "path": "qos/acl/mac_acl/mac_acl_rule_cfg_rw.html",
+   "title": "MAC Rules",
+   "top": "Security",
+   "section": "ACL",
+   "group": "Basic",
+   "risk": "write",
+   "url": "/qos/acl/mac_acl/mac_acl_rule_cfg_rw.html"
+  },
+  {
+   "id": "qos-acl-mac-ip-acl-cfg",
+   "path": "qos/acl/mac_ip_acl_cfg.html",
+   "title": "MAC Binding Configuration",
+   "top": "Security",
+   "section": "ACL",
+   "group": "Basic",
+   "risk": "write",
+   "url": "/qos/acl/mac_ip_acl_cfg.html"
+  },
+  {
+   "id": "qos-acl-mac-acl-mac-binding-table",
+   "path": "qos/acl/mac_acl/mac_binding_table.html",
+   "title": "Binding Table",
+   "top": "Security",
+   "section": "ACL",
+   "group": "Basic",
+   "risk": "read",
+   "url": "/qos/acl/mac_acl/mac_binding_table.html"
+  },
+  {
+   "id": "qos-acl-acl-config",
+   "path": "qos/acl/acl_config.html",
+   "title": "IP ACL",
+   "top": "Security",
+   "section": "ACL",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/qos/acl/acl_config.html"
+  },
+  {
+   "id": "qos-acl-acl-rule-cfg",
+   "path": "qos/acl/acl_rule_cfg.html",
+   "title": "IP Rules",
+   "top": "Security",
+   "section": "ACL",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/qos/acl/acl_rule_cfg.html"
+  },
+  {
+   "id": "qos-acl-acl-ext-rule-cfg",
+   "path": "qos/acl/acl_ext_rule_cfg.html",
+   "title": "IP Extended Rules",
+   "top": "Security",
+   "section": "ACL",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/qos/acl/acl_ext_rule_cfg.html"
+  },
+  {
+   "id": "qos-acl-ipv6-acl-config",
+   "path": "qos/acl/ipv6_acl_config.html",
+   "title": "IPv6 ACL",
+   "top": "Security",
+   "section": "ACL",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/qos/acl/ipv6_acl_config.html"
+  },
+  {
+   "id": "qos-acl-ipv6-acl-rule-cfg",
+   "path": "qos/acl/ipv6_acl_rule_cfg.html",
+   "title": "IPv6 Rules",
+   "top": "Security",
+   "section": "ACL",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/qos/acl/ipv6_acl_rule_cfg.html"
+  },
+  {
+   "id": "qos-acl-ip-mac-acl-cfg",
+   "path": "qos/acl/ip_mac_acl_cfg.html",
+   "title": "IP Binding Configuration",
+   "top": "Security",
+   "section": "ACL",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/qos/acl/ip_mac_acl_cfg.html"
+  },
+  {
+   "id": "qos-acl-ip-binding-table",
+   "path": "qos/acl/ip_binding_table.html",
+   "title": "Binding Table",
+   "top": "Security",
+   "section": "ACL",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/qos/acl/ip_binding_table.html"
+  },
+  {
+   "id": "qos-acl-vlan-acl-cfg",
+   "path": "qos/acl/vlan_acl_cfg.html",
+   "title": "VLAN ACL Configuration",
+   "top": "Security",
+   "section": "ACL",
+   "group": "Advanced",
+   "risk": "write",
+   "url": "/qos/acl/vlan_acl_cfg.html"
+  },
+  {
+   "id": "qos-acl-acl-intf-vlan-summary",
+   "path": "qos/acl/acl_intf_vlan_summary.html",
+   "title": "ACL Interface/VLAN Summary",
+   "top": "Security",
+   "section": "ACL",
+   "group": "Advanced",
+   "risk": "read",
+   "url": "/qos/acl/acl_intf_vlan_summary.html"
+  },
+  {
+   "id": "base-system-stats-stats-switch",
+   "path": "base/system/stats/stats_switch.html",
+   "title": "Switch Statistics",
+   "top": "Monitoring",
+   "section": "Ports",
+   "group": "",
+   "risk": "read",
+   "url": "/base/system/stats/stats_switch.html"
+  },
+  {
+   "id": "base-system-stats-statsport-summ",
+   "path": "base/system/stats/statsport_summ.html",
+   "title": "Port Statistics",
+   "top": "Monitoring",
+   "section": "Ports",
+   "group": "",
+   "risk": "read",
+   "url": "/base/system/stats/statsport_summ.html"
+  },
+  {
+   "id": "base-system-stats-stats-port",
+   "path": "base/system/stats/stats_port.html",
+   "title": "Port Detailed Statistics",
+   "top": "Monitoring",
+   "section": "Ports",
+   "group": "",
+   "risk": "read",
+   "url": "/base/system/stats/stats_port.html"
+  },
+  {
+   "id": "security-dot1x-eapstatistics",
+   "path": "security/dot1x/eapStatistics.html",
+   "title": "EAP Statistics",
+   "top": "Monitoring",
+   "section": "Ports",
+   "group": "",
+   "risk": "read",
+   "url": "/security/dot1x/eapStatistics.html"
+  },
+  {
+   "id": "base-system-port-cabletest",
+   "path": "base/system/port/cableTest.html",
+   "title": "Cable Test",
+   "top": "Monitoring",
+   "section": "Ports",
+   "group": "",
+   "risk": "action",
+   "url": "/base/system/port/cableTest.html"
+  },
+  {
+   "id": "base-system-log-inmemory-cfg",
+   "path": "base/system/log/inmemory_cfg.html",
+   "title": "Memory Logs",
+   "top": "Monitoring",
+   "section": "Logs",
+   "group": "",
+   "risk": "action",
+   "url": "/base/system/log/inmemory_cfg.html"
+  },
+  {
+   "id": "base-system-log-persistent-cfg",
+   "path": "base/system/log/persistent_cfg.html",
+   "title": "FLASH Logs",
+   "top": "Monitoring",
+   "section": "Logs",
+   "group": "",
+   "risk": "action",
+   "url": "/base/system/log/persistent_cfg.html"
+  },
+  {
+   "id": "base-system-log-syslog-cfg",
+   "path": "base/system/log/syslog_cfg.html",
+   "title": "Server Logs",
+   "top": "Monitoring",
+   "section": "Logs",
+   "group": "",
+   "risk": "write",
+   "url": "/base/system/log/syslog_cfg.html"
+  },
+  {
+   "id": "base-system-trapmgr-trap-log",
+   "path": "base/system/trapmgr/trap_log.html",
+   "title": "Trap Logs",
+   "top": "Monitoring",
+   "section": "Logs",
+   "group": "",
+   "risk": "read",
+   "url": "/base/system/trapmgr/trap_log.html"
+  },
+  {
+   "id": "base-system-event-log",
+   "path": "base/system/event_log.html",
+   "title": "Event Logs",
+   "top": "Monitoring",
+   "section": "Logs",
+   "group": "",
+   "risk": "action",
+   "url": "/base/system/event_log.html"
+  },
+  {
+   "id": "base-system-port-multiple-port-mirror",
+   "path": "base/system/port/multiple_port_mirror.html",
+   "title": "Port Mirroring",
+   "top": "Monitoring",
+   "section": "Mirroring",
+   "group": "",
+   "risk": "read",
+   "url": "/base/system/port/multiple_port_mirror.html"
+  },
+  {
+   "id": "base-system-save-changes",
+   "path": "base/system/save_changes.html",
+   "title": "Save Configuration",
+   "top": "Maintenance",
+   "section": "Save Configuration",
+   "group": "",
+   "risk": "write",
+   "url": "/base/system/save_changes.html"
+  },
+  {
+   "id": "base-system-sys-reset",
+   "path": "base/system/sys_reset.html",
+   "title": "Device Reboot",
+   "top": "Maintenance",
+   "section": "Reset",
+   "group": "",
+   "risk": "destructive",
+   "url": "/base/system/sys_reset.html"
+  },
+  {
+   "id": "base-system-reset-cfg",
+   "path": "base/system/reset_cfg.html",
+   "title": "Factory Default",
+   "top": "Maintenance",
+   "section": "Reset",
+   "group": "",
+   "risk": "destructive",
+   "url": "/base/system/reset_cfg.html"
+  },
+  {
+   "id": "base-system-file-upload",
+   "path": "base/system/file_upload.html",
+   "title": "TFTP File Upload",
+   "top": "Maintenance",
+   "section": "Upload",
+   "group": "",
+   "risk": "destructive",
+   "url": "/base/system/file_upload.html"
+  },
+  {
+   "id": "base-system-http-file-upload",
+   "path": "base/system/http_file_upload.html",
+   "title": "HTTP File Upload",
+   "top": "Maintenance",
+   "section": "Upload",
+   "group": "",
+   "risk": "destructive",
+   "url": "/base/system/http_file_upload.html"
+  },
+  {
+   "id": "base-system-file-download",
+   "path": "base/system/file_download.html",
+   "title": "TFTP File Download",
+   "top": "Maintenance",
+   "section": "Download",
+   "group": "",
+   "risk": "action",
+   "url": "/base/system/file_download.html"
+  },
+  {
+   "id": "base-system-http-file-download",
+   "path": "base/system/http_file_download.html",
+   "title": "HTTP File Download",
+   "top": "Maintenance",
+   "section": "Download",
+   "group": "",
+   "risk": "action",
+   "url": "/base/system/http_file_download.html"
+  },
+  {
+   "id": "base-system-dual-image-cfg",
+   "path": "base/system/dual_image_cfg.html",
+   "title": "Dual Image Configuration",
+   "top": "Maintenance",
+   "section": "Filemanagement",
+   "group": "Dual Image",
+   "risk": "destructive",
+   "url": "/base/system/dual_image_cfg.html"
+  },
+  {
+   "id": "base-system-image-status",
+   "path": "base/system/image_status.html",
+   "title": "Dual Image Status",
+   "top": "Maintenance",
+   "section": "Filemanagement",
+   "group": "Dual Image",
+   "risk": "read",
+   "url": "/base/system/image_status.html"
+  },
+  {
+   "id": "base-system-ping",
+   "path": "base/system/ping.html",
+   "title": "Ping",
+   "top": "Maintenance",
+   "section": "Troubleshooting",
+   "group": "",
+   "risk": "action",
+   "url": "/base/system/ping.html"
+  },
+  {
+   "id": "ipv6-ipv6-ping-ipv6",
+   "path": "ipv6/ipv6/ping_ipv6.html",
+   "title": "Ping IPv6",
+   "top": "Maintenance",
+   "section": "Troubleshooting",
+   "group": "",
+   "risk": "read",
+   "url": "/ipv6/ipv6/ping_ipv6.html"
+  },
+  {
+   "id": "base-system-traceroute",
+   "path": "base/system/traceroute.html",
+   "title": "Traceroute",
+   "top": "Maintenance",
+   "section": "Troubleshooting",
+   "group": "",
+   "risk": "action",
+   "url": "/base/system/traceroute.html"
+  },
+  {
+   "id": "base-support",
+   "path": "base/support.html",
+   "title": "Support",
+   "top": "Help",
+   "section": "Online Help",
+   "group": "",
+   "risk": "action",
+   "url": "/base/support.html"
+  },
+  {
+   "id": "base-userguide",
+   "path": "base/userGuide.html",
+   "title": "User Guide",
+   "top": "Help",
+   "section": "Online Help",
+   "group": "",
+   "risk": "read",
+   "url": "/base/userGuide.html"
+  },
+  {
+   "id": "base-prodregistration-registration",
+   "path": "base/prodRegistration/registration.html",
+   "title": "Registration",
+   "top": "Help",
+   "section": "Registration",
+   "group": "",
+   "risk": "action",
+   "url": "/base/prodRegistration/registration.html"
+  }
+ ]
+}
